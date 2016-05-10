@@ -1,0 +1,147 @@
+3.0.0
+  151110
+  Improvement
+  * #i0016: PHP code is removed. Configuration with TypoScript alone.
+            DOWNGRADE
+            * Please include the 2.x templates
+            UPGRADE
+            * BE AWARE
+              * You have to adapt your TypoScript configuration!
+              * Templates are lost for
+                * cal
+                * pages
+                * resetPageMeta
+                * tt_news
+                * tt_products
+
+2.4.4
+  151031
+  Bugfix
+  * #i0015: DRS url prompt
+
+2.4.3
+  141004
+  Improvement
+  * #i0014: Labeling TypoScript Templates
+
+2.4.2
+  141001
+  Improvement
+  * #i0013: Manual
+  * #i0012: Icon
+
+2.4.1
+  140507
+  Feature
+  * #58584: Fit it into TYPO3 6.2
+            * Improvement of page.meta
+            * Moved default values
+              * database.table: [empty] -> pages
+              * database.field.short: short -> subtitle
+            * Removing of pibase
+  * #i0012: New default template for pages
+            Effected files
+            * static/pages    (new)
+
+2.2.0
+  140503
+  Feature
+  * #58437: Fit it into TYPO3 6.1
+  Improvement
+  * #i0011: plugin.tx_seodynamictag.database.field.author got a default value
+
+2.1.2
+  140115
+  Bugfix
+  * #i0010: TYPO3 6.x, PHP 5.3.10: unproper result of mysql_fetch_row
+            Replaced with $GLOBALS['TYPO3_DB']->sql_fetch_row( $res )
+
+2.1.1
+  131119
+  Bug
+  * #53767: Meta tags for list view are missing
+            Effected files:
+            * setup/static.txt
+
+2.1.0
+  130920
+  Feature
+  * #i0009: Proper lables for static templates
+  * #52158: Default meta-tag configuration
+
+2.0.4
+  130918
+  Improvement
+  * #i0009: Manual
+
+2.0.3
+  130917
+  Improvement
+  * #i0008: TYPO3 version in ext_emconf.php
+  * #i0007: Manual
+  * #i0006: Labelling Constant Editor
+
+2.0.2
+  130902
+  Improvement
+  * #i0005: mb_strtolower
+
+2.0.1
+  130731
+  Improvement
+  * #i0004: Control workflow of keyword handling by the Constant Editor
+
+2.0.0
+  130731
+  Features
+  * #49442: Canonical tag
+  * #i0004: Dynamic page object
+  * #i0001: User interface: integration of the constant editor
+            Effected files:
+            * ext_tables.php      ( new )
+            * static              ( new )
+              * constants.txt
+              * setup.txt
+  Improvement
+  * #i0003: The labels of registers got the prefix tx_seodynamic_tag_
+            Effected files:
+            * static
+              * setup.txt
+
+1.1.1
+  130115
+  Bugfix
+  * #44545: Class 't3lib_utility_Debug' not found
+            Downgrade for TYPO3 4.4
+            Effected file:
+            * pi1/class.tx_seodynamictag_pi1.php
+
+1.1.0
+  121025
+  Improvement
+  * #42405: t3lib_div::view_array is deprecated
+            Update for TYPO3 4.7
+            Effected file:
+            * pi1/class.tx_seodynamictag_pi1.php
+
+1.0.0
+  10-02-20
+  New Main Version
+  - Corporate Design Die Netzmacher GbR
+
+0.0.5
+  Improvement
+  - Documentation
+
+0.0.3
+  Improvement
+  - Keywords
+
+0.0.2
+  New Feature
+  - Keyword configuration
+
+0.0.1
+  08-01-29
+  Initial release
+  Dirk Wildt  <http://wildt.at.die-netzmacher.de>
