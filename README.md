@@ -1,4 +1,4 @@
-# SEO Dynamic Tag 3'
+# SEO Dynamic Tag 3
 Search Engine Optimization (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
 
 ## Manuals
