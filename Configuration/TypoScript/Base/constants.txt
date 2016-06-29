@@ -9,7 +9,7 @@ plugin.tx_seodynamictag {
   # cat=Seo Dynamic Tag - Canonical Tag*//401;   type=boolean;    label= Use cash hash: Recommended. Use a cash hash parameter for a unique URL.
   canonical.useCashHash             = 1
 
-  # cat=Seo Dynamic Tag - Conditions*//200;   type=string;        label= Single view begin*:*Obligate! Global condition beginning for the single view. Without outer square brackets (!). Replace 'xxx' with the id of the page with your plugin for the single view. You can use PIDinRootline among others but this is dangerous. Example: GP:tx_ttnews|tt_news > 0] && [globalVar = TSFE:id = 123
+  # cat=Seo Dynamic Tag - Conditions*//200;   type=string;        label= Single view begin*:*Obligate! Global condition beginning for the single view. Without outer square brackets (!). Replace 'xxx' with the id of the page with your plugin for the single view. You can use PIDinRootline among others but this is dangerous. Example: globalVar = GP:tx_ttnews|tt_news > 0] && [globalVar = TSFE:id = 123
   condition.single.begin  = globalVar = GP:table|field > 0] && [globalVar = TSFE:id = xxx
   # cat=Seo Dynamic Tag - Conditions*//201;   type=string;        label= Single view end*:*Obligate! Global condition ending. Without outer square brackets (!). Usually: global
   condition.single.end    = global
@@ -39,7 +39,7 @@ plugin.tx_seodynamictag {
   database.field.keywords.cover     = title
   # cat=Seo Dynamic Tag - Database*//601;   type=string;          label= Title prefix*:*Obligate! Value is used in the prefix of title tag. A field is recommended! You can use a list of fields, separated by a double slash. I.e: subtitle // title
   database.field.title.prefix       = title
-  # cat=Seo Dynamic Tag - Database*//701;   type=string;          label= title appendix*:*Obligate! Value is used in appendix the title tag. A field is recommended! Example for a field: short. Example for a constant: "my short".
+  # cat=Seo Dynamic Tag - Database*//701;   type=string;          label= Title appendix*:*Obligate! Value is used in appendix the title tag. A field is recommended! Example for a field: short. Example for a constant: "my short".
   database.field.title.appendix     = short // bodytext
 
   # cat=Seo Dynamic Tag - Default values//100;   type=string;     label= Author: Default author, if current record doesn't contain any author. For single views only. Leave it empty, if you don't like a default author.
@@ -49,27 +49,27 @@ plugin.tx_seodynamictag {
   # cat=Seo Dynamic Tag - Default values//102;   type=string;     label= Keywords: Default keywords, if current record doesn't contain any keyword. For single views only. Leave it empty, if you don't like default keywords.
   default.keywords    = TYPO3, SEO, SEO Dynamic Tag
 
-  # cat=Seo Dynamic Tag - Description//100;   type=string;      label= Prefix: String will prepended to the meta tag description.
+  # cat=Seo Dynamic Tag - Meta Description//100;   type=string;      label= Prefix: String will prepended to the meta tag description.
   description.prefix        =
-  # cat=Seo Dynamic Tag - Description//200;   type=string;      label= Devider: Devider between description and description appendix
+  # cat=Seo Dynamic Tag - Meta Description//200;   type=string;      label= Devider: Devider between description and description appendix
   description.devider.value = |
-  # cat=Seo Dynamic Tag - Description//201;   type=string;      label= Devider wrap: No trim wrap for the description devider (TypoScript style)
+  # cat=Seo Dynamic Tag - Meta Description//201;   type=string;      label= Devider wrap: No trim wrap for the description devider (TypoScript style)
   description.devider.noTrimWrap  = | | |
-  # cat=Seo Dynamic Tag - Description//300;   type=string;      label= Appendix: String will appended to the meta tag description.
+  # cat=Seo Dynamic Tag - Meta Description//300;   type=string;      label= Appendix: String will appended to the meta tag description.
   description.appendix      =
 
-  # cat=Seo Dynamic Tag - Keywords//100;   type=string;      label= Prefix: String will prepended to the meta tag keywords.
+  # cat=Seo Dynamic Tag - Meta Keywords//100;   type=string;      label= Prefix: String will prepended to the meta tag keywords.
   keywords.prefix           =
-  # cat=Seo Dynamic Tag - Keywords//300;   type=string;      label= Appendix: String will appended to the meta tag keywords.
+  # cat=Seo Dynamic Tag - Meta Keywords//300;   type=string;      label= Appendix: String will appended to the meta tag keywords.
   keywords.appendix         =
 
-  # cat=Seo Dynamic Tag - Title//100;   type=string;      label= Prefix: String will prepended to the title tag.
+  # cat=Seo Dynamic Tag - Meta Title//100;   type=string;      label= Prefix: String will prepended to the title tag.
   title.prefix              =
-  # cat=Seo Dynamic Tag - Title//200;   type=string;      label= Devider: Devider between title prefix and title appendix
+  # cat=Seo Dynamic Tag - Meta Title//200;   type=string;      label= Devider: Devider between title prefix and title appendix
   title.devider.value       = :
-  # cat=Seo Dynamic Tag - Title//201;   type=string;      label= Devider wrap: No trim wrap for the title devider (TypoScript style)
+  # cat=Seo Dynamic Tag - Meta Title//201;   type=string;      label= Devider wrap: No trim wrap for the title devider (TypoScript style)
   title.devider.noTrimWrap  = || |
-  # cat=Seo Dynamic Tag - Title//300;   type=string;      label= Appendix: String will appended to the title tag.
+  # cat=Seo Dynamic Tag - Meta Title//300;   type=string;      label= Appendix: String will appended to the title tag.
   title.appendix            =
 
   # cat=Seo Dynamic Tag - page object*//100;   type=string;        label= Label*:*Obligate! The label of your page in your TypoScript configuration. Usually: page

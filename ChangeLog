@@ -1,6 +1,15 @@
-3.0.0
-  151110
+3.1.0
+  160629
   Improvement
+  * #i0017: 2.x is moved to Resources/Private/2.x
+            * Please include the 2.x templates again, if they are used
+  Documentation
+  * #t0692: ReST Documentation
+
+3.0.0
+  160628
+  Improvement
+  * #t0691: TYPO3 7.x compatibility
   * #i0016: PHP code is removed. Configuration with TypoScript alone.
             DOWNGRADE
             * Please include the 2.x templates
