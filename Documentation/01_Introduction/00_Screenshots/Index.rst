@@ -15,7 +15,7 @@ Screenshots
 Backend
 -------
 
-.. figure:: ../../Images/screenshot_backend_01.jpg
+.. figure:: ../../Images/01_Introduction/00_Screenshots/screenshot_backend_01.jpg
 	:width: 500px
 	:alt: User interface: Canonical Tag
 
@@ -29,7 +29,7 @@ Frontend
 
 .. _figure_seo_frontend:
 
-.. figure:: ../../Images/screenshot_frontend_01.jpg
+.. figure:: ../../Images/01_Introduction/00_Screenshots/screenshot_frontend_01.jpg
 	:width: 500px
 	:alt: SEO - Search Engine Optimization - with SEO Dynamic Tag
 
