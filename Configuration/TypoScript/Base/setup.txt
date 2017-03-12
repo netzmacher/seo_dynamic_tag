@@ -200,7 +200,7 @@ plugin.tx_seodynamictag_pi1 {
       }
       description = {$plugin.tx_seodynamictag.default.description}
       description {
-				//field = description
+				field = description
         override {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
           cObject = COA
