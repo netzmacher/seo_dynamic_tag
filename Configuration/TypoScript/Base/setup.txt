@@ -332,7 +332,6 @@ plugin.tx_seodynamictag_pi1 {
 												// comma > |
 											31 =
 											31 {
-												search  = TEXT
 												search {
 													stdWrap {
 														cObject = TEXT
@@ -342,8 +341,6 @@ plugin.tx_seodynamictag_pi1 {
 														}
 													}
 												}
-												replace = |
-												replace = TEXT
 												replace {
 													char = 32
 												}
@@ -353,6 +350,14 @@ plugin.tx_seodynamictag_pi1 {
 											32 {
 												search  = ;
 												replace = ,
+											}
+												// semicolon > comma
+											33 =
+											33 {
+												search  = ,
+												replace {
+													char = 32
+												}
 											}
 												// pipe > nul
 											40 =
