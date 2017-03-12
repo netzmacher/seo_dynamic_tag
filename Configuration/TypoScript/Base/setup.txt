@@ -271,7 +271,7 @@ plugin.tx_seodynamictag_pi1 {
       keywords = TEXT
       keywords {
 				field = {$plugin.tx_seodynamictag.database.field.keywords}
-        override {
+        ifEmpty {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords.cover}
           cObject = COA
           cObject {
