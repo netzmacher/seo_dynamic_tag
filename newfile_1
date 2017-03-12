@@ -1,0 +1,130 @@
+[{$plugin.tx_seodynamictag.condition.single.begin}]
+  {$plugin.tx_seodynamictag.page.tsProperty} {
+    meta {
+      description = {$plugin.tx_seodynamictag.default.description}
+      description {
+        override {
+          cObject = COA
+          cObject {
+            10 = TEXT
+            10 {
+              value       = die exen
+              noTrimWrap  = ||: |
+            }
+            20 = CONTENT
+            20 {
+              table = tx_org_repertoire
+              select {
+                pidInList = {$plugin.org.sysfolder.repertoire}
+                join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_repertoire.uid
+                where {
+                  data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                  noTrimWrap  = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_repertoire'|
+                }
+              }
+              renderObj = COA
+              renderObj {
+                  // tx_org_repertoire.title
+                10 = COA
+                10 {
+                  10 = TEXT
+                  10 {
+                    field = title
+                    stdWrap {
+                      stripHtml         = 1
+                      htmlSpecialChars  = 1
+                    }
+                  }
+                  11 = TEXT
+                  11 {
+                    if {
+                      isTrue {
+                        field = title
+                      }
+                    }
+                    value       = |
+                    noTrimWrap  = | | |
+                  }
+                }
+                20 = CONTENT
+                20 {
+                  table = tx_org_cal
+                  select {
+                    pidInList = {$plugin.org.sysfolder.calendar}
+                    where {
+                      data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                      noTrimWrap  = |uid = ||
+                    }
+                  }
+                    // prefix, devider, appendix
+                  renderObj = TEXT
+                  renderObj {
+                    field       = datetime
+                    noTrimWrap  =
+                    required    = 1
+                    strftime    = %d.%m.%Y
+                  }
+                }
+                  // tx_org_location
+                30 = CONTENT
+                30 {
+                  table = tx_org_location
+                  select {
+                    pidInList = {$plugin.org.sysfolder.location}
+                    join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_location.uid
+                    where {
+                      data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                      noTrimWrap  = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_location'|
+                    }
+                  }
+                    // tx_org_location.mail_city (tx_org_location.title)
+                  renderObj = COA
+                  renderObj {
+                    10 = TEXT
+                    10 {
+                      if {
+                        isTrue {
+                          field = mail_city // title
+                        }
+                      }
+                      value       = |
+                      noTrimWrap  = | | |
+                    }
+                    20 = TEXT
+                    20 {
+                      field = mail_city
+                    }
+                    30 = TEXT
+                    30 {
+                      field       = title
+                      noTrimWrap  = | (|)|
+                      required    = 1
+                    }
+                  }
+                }
+                  // tx_org_repertoire.seo_description ...
+                40 = COA
+                40 {
+                  10 = TEXT
+                  10 {
+                    value       = |
+                    noTrimWrap  = | | |
+                  }
+                  20 = TEXT
+                  20 {
+                    field = seo_description // marginal_short // teaser_short // bodytext
+                    crop  = 150 | ... | 1
+                    stdWrap {
+                      stripHtml         = 1
+                      htmlSpecialChars  = 1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+[{$plugin.tx_seodynamictag.condition.single.end}]

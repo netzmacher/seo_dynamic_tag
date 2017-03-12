@@ -1,0 +1,92 @@
+[{$plugin.tx_seodynamictag.condition.single.begin}]
+  {$plugin.tx_seodynamictag.page.tsProperty} {
+    headerData {
+      49442 {
+        20 {
+          20 {
+            10 {
+              renderObj {
+                30 {
+                  strftime = %d.%m.%Y
+                }
+                  // Append to the title: location and description
+                90 = COA
+                90 {
+                    // tx_org_location.mail_city, tx_org_location.title
+                  10 = CONTENT
+                  10 {
+                    table = tx_org_location
+                    select {
+                      pidInList = {$plugin.org.sysfolder.location}
+                      join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_location.uid
+                      where {
+                        data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                        noTrimWrap  = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_location'|
+                      }
+                    }
+                      // tx_org_location.mail_city (tx_org_location.title)
+                    renderObj = COA
+                    renderObj {
+                      10 = TEXT
+                      10 {
+                        if {
+                          isTrue {
+                            field = mail_city // title
+                          }
+                        }
+                        value       = ,
+                        noTrimWrap  = || |
+                      }
+                      20 = TEXT
+                      20 {
+                        field = mail_city
+                      }
+                      30 = TEXT
+                      30 {
+                        field       = title
+                        noTrimWrap  = | (|)|
+                        required    = 1
+                      }
+                    }
+                  }
+                    // tx_org_repertoire.description
+                  20 = CONTENT
+                  20 {
+                    table = tx_org_repertoire
+                    select {
+                      pidInList = {$plugin.org.sysfolder.repertoire}
+                      join = tx_org_mm_all ON tx_org_mm_all.uid_foreign = tx_org_repertoire.uid
+                      where {
+                        data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                        noTrimWrap  = |tx_org_mm_all.uid_local = | AND tx_org_mm_all.table_local = 'tx_org_cal' AND tx_org_mm_all.table_foreign = 'tx_org_repertoire'|
+                      }
+                    }
+                      // tx_org_repertoire: seo_description || marginal_short || teaser_short || bodytext
+                    renderObj = COA
+                    renderObj {
+                      10 = TEXT
+                      10 {
+                        if {
+                          isTrue {
+                            field = seo_description // marginal_short // teaser_short // bodytext
+                          }
+                        }
+                        value       = |
+                        noTrimWrap  = | | |
+                      }
+                      20 = TEXT
+                      20 {
+                        field = seo_description // marginal_short // teaser_short // bodytext
+                        crop  = 50 | ... | 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+[{$plugin.tx_seodynamictag.condition.single.end}]
