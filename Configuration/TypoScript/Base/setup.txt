@@ -332,8 +332,21 @@ plugin.tx_seodynamictag_pi1 {
 												// comma > |
 											31 =
 											31 {
-												search  = ,
+												search  = TEXT
+												search {
+													stdWrap {
+														cObject = TEXT
+														cObject {
+															value = ,
+															noTrimWrap = || |
+														}
+													}
+												}
 												replace = |
+												replace = TEXT
+												replace {
+													char = 32
+												}
 											}
 												// semicolon > comma
 											32 =
@@ -370,12 +383,6 @@ plugin.tx_seodynamictag_pi1 {
 												replace {
 													char = 32
 												}
-											}
-												// | > ,
-											90 =
-											90 {
-												search  = |
-												replace = ,
 											}
 										}
 									}
