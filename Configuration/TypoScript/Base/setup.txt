@@ -166,6 +166,7 @@ plugin.tx_seodynamictag_pi1 {
     meta {
       author = {$plugin.tx_seodynamictag.default.author}
       author {
+				field = author
         override {
             // {$plugin.tx_seodynamictag.database.table}.{$plugin.tx_seodynamictag.database.field.author}
           cObject = COA
@@ -200,6 +201,7 @@ plugin.tx_seodynamictag_pi1 {
       }
       description = TEXT
       description {
+				field = description
         override {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
           cObject = COA
