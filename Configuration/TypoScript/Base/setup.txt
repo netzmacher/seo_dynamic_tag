@@ -164,6 +164,7 @@ plugin.tx_seodynamictag_pi1 {
       // author, description, keywords
     meta =
     meta {
+			author >
       author = {$plugin.tx_seodynamictag.default.author}
       author {
         override {
@@ -198,6 +199,7 @@ plugin.tx_seodynamictag_pi1 {
           }
         }
       }
+			description >
       description = {$plugin.tx_seodynamictag.default.description}
       description {
 				field = description
@@ -269,7 +271,8 @@ plugin.tx_seodynamictag_pi1 {
           }
         }
       }
-      keywords = TEXT
+			keywords >
+      keywords = {$plugin.tx_seodynamictag.default.keywords}
       keywords {
 				field = {$plugin.tx_seodynamictag.database.field.keywords}
         ifEmpty = TEXT

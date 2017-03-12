@@ -14,13 +14,15 @@ plugin.tx_seodynamictag {
   # cat=Seo Dynamic Tag - Conditions*//201;   type=string;        label= Single view end*:*Obligate! Global condition ending. Without outer square brackets (!). Usually: global
   condition.single.end    = global
 
-  # cat=Seo Dynamic Tag - Crop//100;   type=int+;                 label= Description: Crop description after X chars (whole words will cropped).
+  # cat=Seo Dynamic Tag - Crop//100;   type=int+;                 label= Description: Crop author after X chars (whole words will cropped).
+  crop.author						= 200
+  # cat=Seo Dynamic Tag - Crop//101;   type=int+;                 label= Description: Crop description after X chars (whole words will cropped).
   crop.description      = 200
-  # cat=Seo Dynamic Tag - Crop//101;   type=int+;                 label= Keywords: Crop keywords after X chars (whole words will cropped).
+  # cat=Seo Dynamic Tag - Crop//102;   type=int+;                 label= Keywords: Crop keywords after X chars (whole words will cropped).
   crop.keywords         = 100
-  # cat=Seo Dynamic Tag - Crop//102;   type=int+;                 label= Title prefix: Crop title prefix after X chars (whole words will cropped).
+  # cat=Seo Dynamic Tag - Crop//103;   type=int+;                 label= Title prefix: Crop title prefix after X chars (whole words will cropped).
   crop.title.prefix     = 100
-  # cat=Seo Dynamic Tag - Crop//103;   type=int+;                 label= Title appendix: Crop title appendix after X chars (whole words will cropped).
+  # cat=Seo Dynamic Tag - Crop//104;   type=int+;                 label= Title appendix: Crop title appendix after X chars (whole words will cropped).
   crop.title.appendix   = 100
 
   # cat=Seo Dynamic Tag - Database*//100;   type=string;          label= Table*:*Obligate! The from table in the SQL query. Example: tt_news
