@@ -335,7 +335,7 @@ plugin.tx_seodynamictag_pi1 {
 												search  = ,
 												replace = TEXT
 												replace {
-													char = 10
+													char = 32
 												}
 											}
 												// semicolon > comma
