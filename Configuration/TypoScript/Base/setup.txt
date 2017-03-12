@@ -342,7 +342,7 @@ plugin.tx_seodynamictag_pi1 {
 													}
 												}
 												replace {
-													char = 32
+													char = 73
 												}
 											}
 												// semicolon > comma
@@ -356,7 +356,7 @@ plugin.tx_seodynamictag_pi1 {
 											33 {
 												search  = ,
 												replace {
-													char = 32
+													char = 72
 												}
 											}
 												// pipe > nul
