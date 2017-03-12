@@ -198,7 +198,7 @@ plugin.tx_seodynamictag_pi1 {
           }
         }
       }
-      description = TEXT
+      description = {$plugin.tx_seodynamictag.default.description}
       description {
         override {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
@@ -262,7 +262,7 @@ plugin.tx_seodynamictag_pi1 {
           }
         }
       }
-      keywords = TEXT
+      keywords = {$plugin.tx_seodynamictag.keywords.default}
       keywords {
         override {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords}
