@@ -330,8 +330,8 @@ plugin.tx_seodynamictag_pi1 {
 												replace =
 											}
 												// comma > null
-											31 =
-											31 {
+											xx31 =
+											xx31 {
 												search  = ,
 												replace = TEXT
 												replace {
