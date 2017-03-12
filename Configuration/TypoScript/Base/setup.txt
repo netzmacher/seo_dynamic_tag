@@ -268,8 +268,14 @@ plugin.tx_seodynamictag_pi1 {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords}
           cObject = COA
           cObject {
+							// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords}
+            if =
             if {
-              isTrue = {$plugin.tx_seodynamictag.database.field.keywords}{$plugin.tx_seodynamictag.database.field.keywords.cover}
+								// isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords}
+							isTrue =
+							isTrue {
+								field = {$plugin.tx_seodynamictag.database.field.keywords}
+							}
             }
               // prefix: {$plugin.tx_seodynamictag.keywords.prefix}
             10 = TEXT
@@ -289,76 +295,72 @@ plugin.tx_seodynamictag_pi1 {
                   noTrimWrap  = |uid = ||
                 }
               }
-                // {$plugin.tx_seodynamictag.database.field.keywords} || {$plugin.tx_seodynamictag.database.field.keywords.cover}
+                // {$plugin.tx_seodynamictag.database.field.keywords}
               renderObj = TEXT
               renderObj {
-                field = {$plugin.tx_seodynamictag.database.field.keywords}
-                ifEmpty {
-                    // {$plugin.tx_seodynamictag.database.field.keywords.cover}
-                  cObject = TEXT
-                  cObject {
-                    field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-                    crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
-                    stdWrap {
-                      replacement {
-                          // bracket ( > null
-                        10 =
-                        10 {
-                          search  = (
-                          replace =
-                        }
-                          // bracket ) > null
-                        20 =
-                        20 {
-                          search  = )
-                          replace =
-                        }
-                          // dot > null
-                        30 =
-                        30 {
-                          search  = .
-                          replace =
-                        }
-                          // pipe > nul
-                        40 =
-                        40 {
-                          search = |
-                          replace =
-                        }
-                          // line feed > null
-                        50 =
-                        50 {
-                          search {
-                            char = 10
-                          }
-                          replace =
-                        }
-                          // semicolon > comma
-                        60 =
-                        60 {
-                          search  = ;
-                          replace = ,
-                        }
-                          // space > comma
-                        70 =
-                        70 {
-                          search {
-                            char = 32
-                          }
-                          replace = ,
-                        }
-                          // underscore > space
-                        80 =
-                        80 {
-                          search = _
-                          replace {
-                            char = 32
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
+								cObject = TEXT
+								cObject {
+									field = {$plugin.tx_seodynamictag.database.field.keywords}
+									crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
+									stdWrap {
+										replacement {
+												// bracket ( > null
+											10 =
+											10 {
+												search  = (
+												replace =
+											}
+												// bracket ) > null
+											20 =
+											20 {
+												search  = )
+												replace =
+											}
+												// dot > null
+											30 =
+											30 {
+												search  = .
+												replace =
+											}
+												// pipe > nul
+											40 =
+											40 {
+												search = |
+												replace =
+											}
+												// line feed > null
+											50 =
+											50 {
+												search {
+													char = 10
+												}
+												replace =
+											}
+												// semicolon > comma
+											60 =
+											60 {
+												search  = ;
+												replace = ,
+											}
+												// space > comma
+											70 =
+											70 {
+												search {
+													char = 32
+												}
+												replace = ,
+											}
+												// underscore > space
+											80 =
+											80 {
+												search = _
+												replace {
+													char = 32
+												}
+											}
+										}
+									}
+								}
                 stdWrap {
                   stripHtml         = 1
                   htmlSpecialChars  = 1

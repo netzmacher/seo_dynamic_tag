@@ -30,13 +30,11 @@ plugin.tx_seodynamictag {
   # cat=Seo Dynamic Tag - Database*//201;   type=string;          label= GP parameter for uid*:*Obligate! The GP parameter with the uid. Example: tx_ttnews|tt_news
   database.gp                 =
   # cat=Seo Dynamic Tag - Database*//301;   type=string;          label= Author*:*Obligate! Value is used in the meta tag author. You can use a list of fields, separated by a double slash. I.e: author // actor. If field or field value is empty, SEO Dynamic Tag takes the value from the author default. See [SEO DYNAMIC TAG - DEFAULT VALUES].
-  database.field.author       =
+  database.field.author							= author
   # cat=Seo Dynamic Tag - Database*//401;   type=string;          label= Description: Value is used in the meta tag description. You can use a list of fields, separated by a double slash. I.e: description // short // bodytext. If field or field value is empty, SEO Dynamic Tag takes the value from the description default. See [SEO DYNAMIC TAG - DEFAULT VALUES].
-  database.field.description        = description // seo_description
+  database.field.description        = description // seo_description // marginal_short // teaser_short // short // bodytext
   # cat=Seo Dynamic Tag - Database*//501;   type=string;          label= Keywords: Value is used in the meta tag keywords. Keywords should be a comma separated list. You can use a list of fields, separated by a double slash. I.e: keywords // seo_keywords. If field or field value is empty, SEO Dynamic Tag takes the value from the keywords default. See [SEO DYNAMIC TAG - DEFAULT VALUES].
-  database.field.keywords           = keywords // seo_keywords
-  # cat=Seo Dynamic Tag - Database*//502;   type=string;          label= Keywords cover: A cover field for the keyword field. It will used, if the keyword field is empty. Content of cover fields will processed. For exyample spaces will be replaced by commas. You can use a list of fields, separated by a double slash. I.e: subtitle // title
-  database.field.keywords.cover     = title
+  database.field.keywords           = keywords // seo_keywords // marginal_short // teaser_short // short // bodytext
   # cat=Seo Dynamic Tag - Database*//601;   type=string;          label= Title prefix*:*Obligate! Value is used in the prefix of title tag. A field is recommended! You can use a list of fields, separated by a double slash. I.e: subtitle // title
   database.field.title.prefix       = title
   # cat=Seo Dynamic Tag - Database*//701;   type=string;          label= Title appendix*:*Obligate! Value is used in appendix the title tag. A field is recommended! Example for a field: short. Example for a constant: "my short".
