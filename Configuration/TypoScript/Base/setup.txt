@@ -54,6 +54,7 @@ plugin.tx_seodynamictag_pi1 {
               table = {$plugin.tx_seodynamictag.database.table}
               select {
                 pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+                recursive = {$plugin.tx_seodynamictag.database.recursive}
                 where {
                   data        = GP:{$plugin.tx_seodynamictag.database.gp}
                   noTrimWrap  = |uid = ||
@@ -184,6 +185,7 @@ plugin.tx_seodynamictag_pi1 {
               table = {$plugin.tx_seodynamictag.database.table}
               select {
                 pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+                recursive = {$plugin.tx_seodynamictag.database.recursive}
                 where {
                   data        = GP:{$plugin.tx_seodynamictag.database.gp}
                   noTrimWrap  = |uid = ||
@@ -222,6 +224,7 @@ plugin.tx_seodynamictag_pi1 {
 						table = {$plugin.tx_seodynamictag.database.table}
 						select {
 							pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+							recursive = {$plugin.tx_seodynamictag.database.recursive}
 							where {
 								data        = GP:{$plugin.tx_seodynamictag.database.gp}
 								noTrimWrap  = |uid = ||
@@ -283,6 +286,7 @@ plugin.tx_seodynamictag_pi1 {
 						select =
 						select {
 							pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+							recursive = {$plugin.tx_seodynamictag.database.recursive}
 							where {
 								data        = GP:{$plugin.tx_seodynamictag.database.gp}
 								noTrimWrap  = |uid = ||
