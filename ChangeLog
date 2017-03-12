@@ -1,8 +1,7 @@
 3.1.3
   170312
-  Improvement
+  Bugfix
   * #i0020: page.meta
-						* author
 						* description 
 						* keywords
 

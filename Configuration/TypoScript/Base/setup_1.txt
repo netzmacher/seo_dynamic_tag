@@ -204,196 +204,218 @@ plugin.tx_seodynamictag_pi1 {
         }
       }
 			description >
-			description = {$plugin.tx_seodynamictag.default.description}
       description {
-					// prefix, description, appendix
-				cObject = COA
-				cObject {
-						// prefix: value = {$plugin.tx_seodynamictag.description.prefix}
-					10 = TEXT
-					10 {
-						value       = {$plugin.tx_seodynamictag.description.prefix}
-						noTrimWrap  = || |
-						required    = 1
-					}
-						// {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
-					20 = CONTENT
-					20 {
-						table = {$plugin.tx_seodynamictag.database.table}
-						select {
-							pidInList = {$plugin.tx_seodynamictag.database.pidInList}
-							where {
-								data        = GP:{$plugin.tx_seodynamictag.database.gp}
-								noTrimWrap  = |uid = ||
+				ifEmpty = {$plugin.tx_seodynamictag.default.description}
+				field = description
+        XXXoverride {
+            // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
+          cObject = COA
+          cObject {
+							// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.description}
+            if =
+            if {
+								// isTrue.field = {$plugin.tx_seodynamictag.database.field.description}
+							isTrue =
+							isTrue {
+								field = {$plugin.tx_seodynamictag.database.field.description}
 							}
-						}
-						renderObj = TEXT
-						renderObj {
-							field = {$plugin.tx_seodynamictag.database.field.description}
-							crop  = {$plugin.tx_seodynamictag.crop.description} | ... | 1
-							stdWrap {
-								stripHtml         = 1
-								htmlSpecialChars  = 1
-							}
-						}
-					}
-						// appendix: value = {$plugin.tx_seodynamictag.description.appendix}
-					30 = COA
-					30 {
-							// if.isTrue = {$plugin.tx_seodynamictag.description.appendix}
-						if =
-						if {
-							isTrue = {$plugin.tx_seodynamictag.description.appendix}
-						}
-							// devider: value = {$plugin.tx_seodynamictag.description.devider.value}
-						10 = TEXT
-						10 {
-							value       = {$plugin.tx_seodynamictag.description.devider.value}
-							noTrimWrap  = {$plugin.tx_seodynamictag.description.devider.noTrimWrap}
-							required    = 1
-						}
-							// appendix: value = {$plugin.tx_seodynamictag.description.appendix}
-						20 = TEXT
-						20 {
-							value     = {$plugin.tx_seodynamictag.description.appendix}
-							wrap      = |
-							required  = 1
-						}
-					}
-				}
+            }
+              // prefix: {$plugin.tx_seodynamictag.description.prefix}
+            10 = TEXT
+            10 {
+              value       = {$plugin.tx_seodynamictag.description.prefix}
+              noTrimWrap  = || |
+              required    = 1
+            }
+              // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
+            20 = CONTENT
+            20 {
+              table = {$plugin.tx_seodynamictag.database.table}
+              select {
+                pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+                where {
+                  data        = GP:{$plugin.tx_seodynamictag.database.gp}
+                  noTrimWrap  = |uid = ||
+                }
+              }
+              renderObj = TEXT
+              renderObj {
+                field = {$plugin.tx_seodynamictag.database.field.description}
+                crop  = {$plugin.tx_seodynamictag.crop.description} | ... | 1
+                stdWrap {
+                  stripHtml         = 1
+                  htmlSpecialChars  = 1
+                }
+              }
+            }
+              // appendix: {$plugin.tx_seodynamictag.description.appendix}
+            30 = COA
+            30 {
+              if {
+                isTrue = {$plugin.tx_seodynamictag.description.appendix}
+              }
+                // devider: {$plugin.tx_seodynamictag.description.appendix}
+              10 = TEXT
+              10 {
+                value       = {$plugin.tx_seodynamictag.description.devider.value}
+                noTrimWrap  = {$plugin.tx_seodynamictag.description.devider.noTrimWrap}
+                required    = 1
+              }
+                // appendix: {$plugin.tx_seodynamictag.description.appendix}
+              20 = TEXT
+              20 {
+                value     = {$plugin.tx_seodynamictag.description.appendix}
+                wrap      = |
+                required  = 1
+              }
+            }
+            stdWrap {
+              ifEmpty = {$plugin.tx_seodynamictag.default.description}
+            }
+          }
+        }
       }
 			keywords >
-			keywords = {$plugin.tx_seodynamictag.default.keywords}
       keywords {
-					// prefix, table = {$plugin.tx_seodynamictag.database.table}, appendix
-				cObject = COA
-				cObject {
-						// prefix: {$plugin.tx_seodynamictag.keywords.prefix}
-					10 = TEXT
-					10 {
-						value     = {$plugin.tx_seodynamictag.keywords.prefix}
-						wrap      = |,
-						required  = 1
-					}
-						// table = {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords} and ifEmpty {$plugin.tx_seodynamictag.database.field.keywords.cover}
-					20 = CONTENT
-					20 {
-						table = {$plugin.tx_seodynamictag.database.table}
-							// pidInList = {$plugin.tx_seodynamictag.database.pidInList}, where.data = GP:{$plugin.tx_seodynamictag.database.gp}
-						select =
-						select {
-							pidInList = {$plugin.tx_seodynamictag.database.pidInList}
-							where {
-								data        = GP:{$plugin.tx_seodynamictag.database.gp}
-								noTrimWrap  = |uid = ||
-							}
-						}
-							// cObject.field = {$plugin.tx_seodynamictag.database.field.keywords}, cObject.stdWrap.ifEmpty.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-						renderObj = TEXT
-						renderObj {
-								// field = {$plugin.tx_seodynamictag.database.field.keywords}, stdWrap.ifEmpty.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-							cObject = TEXT
-							cObject {
-								field = {$plugin.tx_seodynamictag.database.field.keywords}
-								crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
-									// ifEmpty.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-								stdWrap =
-								stdWrap {
-										// field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-									ifEmpty = TEXT
-									ifEmpty {
-										field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-										crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
-										stdWrap {
-											replacement {
-													// bracket ( > null
-												10 =
-												10 {
-													search  = (
-													replace =
-												}
-													// bracket ) > null
-												20 =
-												20 {
-													search  = )
-													replace =
-												}
-													// dot > null
-												30 =
-												30 {
-													search  = .
-													replace =
-												}
-													// ", " > ","
-												31 =
-												31 {
-													search {
-														stdWrap {
-															cObject = TEXT
-															cObject {
-																value = ,
-																noTrimWrap = || |
+        ifEmpty = TEXT
+        ifEmpty {
+            // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords.cover}
+						field = {$plugin.tx_seodynamictag.database.field.keywords}
+						stdWrap {
+							ifEmpty = TEXT
+							ifEmpty {
+									// {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords.cover}
+								cObject = COA
+								cObject {
+										// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+									if =
+									if {
+											// isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+										isTrue =
+										isTrue {
+											field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+										}
+									}
+										// prefix: {$plugin.tx_seodynamictag.keywords.prefix}
+									10 = TEXT
+									10 {
+										value     = {$plugin.tx_seodynamictag.keywords.prefix}
+										wrap      = |,
+										required  = 1
+									}
+										// {$plugin.tx_seodynamictag.database.table}.{$plugin.tx_seodynamictag.database.field.keywords.cover}
+									20 = CONTENT
+									20 {
+										table = {$plugin.tx_seodynamictag.database.table}
+										select {
+											pidInList = {$plugin.tx_seodynamictag.database.pidInList}
+											where {
+												data        = GP:{$plugin.tx_seodynamictag.database.gp}
+												noTrimWrap  = |uid = ||
+											}
+										}
+											// field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+										renderObj = TEXT
+										renderObj {
+												// field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+											cObject = TEXT
+											cObject {
+												field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
+												crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
+												stdWrap {
+													replacement {
+															// bracket ( > null
+														10 =
+														10 {
+															search  = (
+															replace =
+														}
+															// bracket ) > null
+														20 =
+														20 {
+															search  = )
+															replace =
+														}
+															// dot > null
+														30 =
+														30 {
+															search  = .
+															replace =
+														}
+															// ", " > ","
+														31 =
+														31 {
+															search {
+																stdWrap {
+																	cObject = TEXT
+																	cObject {
+																		value = ,
+																		noTrimWrap = || |
+																	}
+																}
+															}
+															replace = ,
+														}
+															// semicolon > comma
+														32 =
+														32 {
+															search  = ;
+															replace = ,
+														}
+															// pipe > null
+														40 =
+														40 {
+															search = |
+															replace =
+														}
+															// line feed > null
+														50 =
+														50 {
+															search {
+																char = 10
+															}
+															replace =
+														}
+															// space > comma
+														70 =
+														70 {
+															search {
+																char = 32
+															}
+															replace = ,
+														}
+															// underscore > space
+														80 =
+														80 {
+															search = _
+															replace {
+																char = 32
 															}
 														}
 													}
-													replace = ,
-												}
-													// semicolon > comma
-												32 =
-												32 {
-													search  = ;
-													replace = ,
-												}
-													// pipe > null
-												40 =
-												40 {
-													search = |
-													replace =
-												}
-													// line feed > null
-												50 =
-												50 {
-													search {
-														char = 10
-													}
-													replace =
-												}
-													// space > comma
-												70 =
-												70 {
-													search {
-														char = 32
-													}
-													replace = ,
-												}
-													// underscore > space
-												80 =
-												80 {
-													search = _
-													replace {
-														char = 32
-													}
 												}
 											}
+											stdWrap {
+												stripHtml         = 1
+												htmlSpecialChars  = 1
+											}
 										}
+										// appendix: {$plugin.tx_seodynamictag.keywords.appendix}
+									30 = TEXT
+									30 {
+										value     = {$plugin.tx_seodynamictag.keywords.appendix}
+										wrap      = ,|
+										required  = 1
 									}
 								}
 							}
-							stdWrap {
-								stripHtml         = 1
-								htmlSpecialChars  = 1
-							}
 						}
 					}
-						// appendix: {$plugin.tx_seodynamictag.keywords.appendix}
-					30 = TEXT
-					30 {
-						value     = {$plugin.tx_seodynamictag.keywords.appendix}
-						wrap      = ,|
-						required  = 1
+					stdWrap {
+						ifEmpty = {$plugin.tx_seodynamictag.default.keywords}
 					}
-				}
-			}
+        }
+      }
     }
   }
 }
