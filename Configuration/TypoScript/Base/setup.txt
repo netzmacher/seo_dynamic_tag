@@ -329,6 +329,18 @@ plugin.tx_seodynamictag_pi1 {
 												search  = .
 												replace =
 											}
+												// comma > null
+											31 =
+											31 {
+												search  = ,
+												replace = 
+											}
+												// semicolon > comma
+											32 =
+											32 {
+												search  = ;
+												replace = ,
+											}
 												// pipe > nul
 											40 =
 											40 {
@@ -342,12 +354,6 @@ plugin.tx_seodynamictag_pi1 {
 													char = 10
 												}
 												replace =
-											}
-												// semicolon > comma
-											60 =
-											60 {
-												search  = ;
-												replace = ,
 											}
 												// space > comma
 											70 =
