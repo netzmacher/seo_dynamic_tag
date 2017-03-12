@@ -26,10 +26,10 @@ plugin.tx_seodynamictag_pi1 {
         10 {
           char = 10
         }
-          // title
+          // title: prefix, title, appendix
         20 = COA
         20 {
-            // prefix
+            // prefix: {$plugin.tx_seodynamictag.title.prefix}
           10 = TEXT
           10 {
             value       = {$plugin.tx_seodynamictag.title.prefix}
@@ -40,13 +40,15 @@ plugin.tx_seodynamictag_pi1 {
               htmlSpecialChars  = 1
             }
           }
-            // Dynamic title part
+						// {$plugin.tx_seodynamictag.database.table}: field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
           20 = COA
           20 {
+							// if.isTrue = {$plugin.tx_seodynamictag.database.field.title.prefix}{$plugin.tx_seodynamictag.database.field.title.appendix}
+            if =
             if {
               isTrue = {$plugin.tx_seodynamictag.database.field.title.prefix}{$plugin.tx_seodynamictag.database.field.title.appendix}
             }
-              // {$plugin.tx_seodynamictag.database.table}, prefix, devider, appendix
+              // {$plugin.tx_seodynamictag.database.table}: field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
             10 = CONTENT
             10 {
               table = {$plugin.tx_seodynamictag.database.table}
@@ -57,10 +59,10 @@ plugin.tx_seodynamictag_pi1 {
                   noTrimWrap  = |uid = ||
                 }
               }
-                // prefix, devider, appendix
+                // field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
               renderObj = COA
               renderObj {
-                  // prefix
+                  // field = {$plugin.tx_seodynamictag.database.field.title.prefix}
                 10 = TEXT
                 10 {
                   field = {$plugin.tx_seodynamictag.database.field.title.prefix}
@@ -104,7 +106,7 @@ plugin.tx_seodynamictag_pi1 {
                   value       = {$plugin.tx_seodynamictag.title.devider.value}
                   noTrimWrap  = {$plugin.tx_seodynamictag.title.devider.noTrimWrap}
                 }
-                  // appendix
+                  // field = {$plugin.tx_seodynamictag.database.field.title.appendix}
                 30 = TEXT
                 30 {
                   field       = {$plugin.tx_seodynamictag.database.field.title.appendix}
@@ -118,10 +120,10 @@ plugin.tx_seodynamictag_pi1 {
               }
             }
           }
-            // appendix
+            // appendix: {$plugin.tx_seodynamictag.title.appendix}
           30 = TEXT
           30 {
-            value       = {$plugin.tx_seodynamictag.title.appendix}
+            value				= {$plugin.tx_seodynamictag.title.appendix}
             //noTrimWrap  = | ||
             required    = 1
             stdWrap {

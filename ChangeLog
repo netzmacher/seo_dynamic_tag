@@ -2,9 +2,9 @@
   170312
   Improvement
   * #i0020: page.meta
+						* author
 						* description 
 						* keywords
-						plugin.tx_seodynamictag.database.field.keywords.cover is removed
 
 3.1.2
   160702
