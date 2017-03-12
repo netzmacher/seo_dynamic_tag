@@ -270,17 +270,18 @@ plugin.tx_seodynamictag_pi1 {
       }
       keywords = TEXT
       keywords {
+				field = {$plugin.tx_seodynamictag.database.field.keywords}
         override {
-            // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords}
+            // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords.cover}
           cObject = COA
           cObject {
-							// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords}
+							// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
             if =
             if {
-								// isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords}
+								// isTrue.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
 							isTrue =
 							isTrue {
-								field = {$plugin.tx_seodynamictag.database.field.keywords}
+								field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
 							}
             }
               // prefix: {$plugin.tx_seodynamictag.keywords.prefix}
@@ -290,7 +291,7 @@ plugin.tx_seodynamictag_pi1 {
               wrap      = |,
               required  = 1
             }
-              // {$plugin.tx_seodynamictag.database.table}.{$plugin.tx_seodynamictag.database.field.keywords}
+              // {$plugin.tx_seodynamictag.database.table}.{$plugin.tx_seodynamictag.database.field.keywords.cover}
             20 = CONTENT
             20 {
               table = {$plugin.tx_seodynamictag.database.table}
@@ -301,13 +302,13 @@ plugin.tx_seodynamictag_pi1 {
                   noTrimWrap  = |uid = ||
                 }
               }
-                // field = {$plugin.tx_seodynamictag.database.field.keywords}
+                // field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
               renderObj = TEXT
               renderObj {
-									// field = {$plugin.tx_seodynamictag.database.field.keywords}
+									// field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
 								cObject = TEXT
 								cObject {
-									field = {$plugin.tx_seodynamictag.database.field.keywords}
+									field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
 									crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
 									stdWrap {
 										replacement {
@@ -349,15 +350,7 @@ plugin.tx_seodynamictag_pi1 {
 												search  = ;
 												replace = ,
 											}
-												// semicolon > comma
-											x33 =
-											x33 {
-												search  = ,
-												replace {
-													char = 72
-												}
-											}
-												// pipe > nul
+												// pipe > null
 											40 =
 											40 {
 												search = |
