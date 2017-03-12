@@ -204,8 +204,14 @@ plugin.tx_seodynamictag_pi1 {
             // {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
           cObject = COA
           cObject {
+							// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.description}
+            if =
             if {
-              isTrue = {$plugin.tx_seodynamictag.database.field.description}
+								// isTrue.field = {$plugin.tx_seodynamictag.database.field.description}
+							isTrue =
+							isTrue {
+								field = {$plugin.tx_seodynamictag.database.field.description}
+							}
             }
               // prefix: {$plugin.tx_seodynamictag.description.prefix}
             10 = TEXT
@@ -295,9 +301,10 @@ plugin.tx_seodynamictag_pi1 {
                   noTrimWrap  = |uid = ||
                 }
               }
-                // {$plugin.tx_seodynamictag.database.field.keywords}
+                // field = {$plugin.tx_seodynamictag.database.field.keywords}
               renderObj = TEXT
               renderObj {
+									// field = {$plugin.tx_seodynamictag.database.field.keywords}
 								cObject = TEXT
 								cObject {
 									field = {$plugin.tx_seodynamictag.database.field.keywords}
