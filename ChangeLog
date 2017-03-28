@@ -5,7 +5,7 @@
 						* Resources/Private/2.x/pi1
   Bugfix
   * #i0022: TYPO3 7.x compatibillity
-						* tslib_cObj
+						* tslib_cObj is updated
 
 3.1.4
   170312
