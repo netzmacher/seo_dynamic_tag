@@ -1,3 +1,11 @@
+3.1.5
+  170328
+  Improvement
+  * #i0023: Removed
+						* Resources/Private/2.x/pi1
+  Bugfix
+  * #i0022: New property: Constant Editor > Database > Recursive
+
 3.1.4
   170312
   Improvement

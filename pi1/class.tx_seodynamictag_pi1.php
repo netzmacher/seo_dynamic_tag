@@ -32,7 +32,7 @@
  * @package TYPO3
  * @subpackage  tx_seodynamictag
  *
- * @version   2.3.0
+ * @version   3.1.5
  * @since     0.0.1
  */
 
@@ -229,11 +229,14 @@ class tx_seodynamictag_pi1
  * @return    string    $host :
  * @access    private
  * @internal  #49442
- * @version   1.2.0
+ * @version		3.1.5
+ * @version   2.0.0
  */
   private function canonicalGetPath( )
   {
-    $cObj = t3lib_div::makeInstance( 'tslib_cObj' );
+		// #i0022, 170328, dwildt, 1-/+
+    //$cObj = t3lib_div::makeInstance( 'tslib_cObj' );
+    $cObj = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance( 'tslib_cObj' );
     $cObj->start( $GLOBALS[ 'TSFE' ]->page, 'pages' );
 
     $coa  = $this->conf[ 'path' ];
