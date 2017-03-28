@@ -236,7 +236,7 @@ class tx_seodynamictag_pi1
   {
 		// #i0022, 170328, dwildt, 1-/+
     //$cObj = t3lib_div::makeInstance( 'tslib_cObj' );
-    $cObj = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance( 'tslib_cObj' );
+    $cObj = new \TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
     $cObj->start( $GLOBALS[ 'TSFE' ]->page, 'pages' );
 
     $coa  = $this->conf[ 'path' ];

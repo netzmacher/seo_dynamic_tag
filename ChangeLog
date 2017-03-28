@@ -4,7 +4,8 @@
   * #i0023: Removed
 						* Resources/Private/2.x/pi1
   Bugfix
-  * #i0022: New property: Constant Editor > Database > Recursive
+  * #i0022: TYPO3 7.x compatibillity
+						* tslib_cObj
 
 3.1.4
   170312
