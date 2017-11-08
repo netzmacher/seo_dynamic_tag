@@ -1,3 +1,13 @@
+3.3.0
+  171108
+	Feature
+	* #i0025: prefix and appendix by field too
+  Improvement
+	* #i0024: Clean up
+						* removed
+							* doc
+							* res
+
 3.2.0
   171008
   UPGRADE TYPO3 8.x
