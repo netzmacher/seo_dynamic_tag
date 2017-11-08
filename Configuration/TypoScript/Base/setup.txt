@@ -301,33 +301,16 @@ plugin.tx_seodynamictag_pi1 {
 								}
 							}
 								// field = {$plugin.tx_seodynamictag.database.field.description.appendix}
-							40 = COA
+							40 = TEXT
 							40 {
-									// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.description.appendix}	
-								if =
-								if {
-									isTrue {
-										field = {$plugin.tx_seodynamictag.database.field.description.appendix}	
-									}
+								field       = {$plugin.tx_seodynamictag.database.field.description.appendix}
+								crop        = {$plugin.tx_seodynamictag.crop.description} | ... | 1
+								required    = 1
+								stdWrap {
+									stripHtml         = 1
+									htmlSpecialChars  = 1
 								}
-									// devider: value = {$plugin.tx_seodynamictag.description.devider.value}
-								10 = TEXT
-								10 {
-									value       = {$plugin.tx_seodynamictag.description.devider.value}
-									noTrimWrap  = {$plugin.tx_seodynamictag.description.devider.noTrimWrap}
-									required    = 1
-								}
-									// field = {$plugin.tx_seodynamictag.database.field.description.appendix}	
-								20 = TEXT
-								20 {
-									field       = {$plugin.tx_seodynamictag.database.field.description.appendix}
-									crop        = {$plugin.tx_seodynamictag.crop.description} | ... | 1
-									required    = 1
-									stdWrap {
-										stripHtml         = 1
-										htmlSpecialChars  = 1
-									}
-								}
+								noTrimWrap = |: ||
 							}
 						}
 					}
