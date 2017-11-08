@@ -450,6 +450,14 @@ plugin.tx_seodynamictag_pi1 {
 														char = 32
 													}
 												}
+													// - > space
+												90 =
+												90 {
+													search = -
+													replace {
+														char = 32
+													}
+												}
 											}
 										}
 									}
