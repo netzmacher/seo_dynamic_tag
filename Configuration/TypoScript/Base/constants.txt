@@ -14,7 +14,7 @@ plugin.tx_seodynamictag {
   # cat=Seo Dynamic Tag - Conditions*//201;   type=string;        label= Single view end*:*Obligate! Global condition ending. Without outer square brackets (!). Usually: global
   condition.single.end    = global
 
-  # cat=Seo Dynamic Tag - Crop//100;   type=int+;                 label= Description: Crop author after X chars (whole words will cropped).
+  # cat=Seo Dynamic Tag - Crop//100;   type=int+;                 label= Author: Crop author after X chars (whole words will cropped).
   crop.author						= 200
   # cat=Seo Dynamic Tag - Crop//101;   type=int+;                 label= Description: Crop description after X chars (whole words will cropped).
   crop.description      = 200
