@@ -128,7 +128,7 @@ plugin.tx_seodynamictag_pi1 {
                     stripHtml         = 1
                     htmlSpecialChars  = 1
                   }
-									noTrimWrap = |:| |
+									noTrimWrap = |: ||
                 }
               }
             }
@@ -142,7 +142,7 @@ plugin.tx_seodynamictag_pi1 {
               stripHtml         = 1
               htmlSpecialChars  = 1
             }
-						noTrimWrap = |:| |
+						noTrimWrap = |: ||
           }
           wrap = <title>|</title>
         }
