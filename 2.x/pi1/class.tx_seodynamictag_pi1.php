@@ -3,7 +3,7 @@
 /* * *************************************************************
  *  Copyright notice
  *
- *  (c) 2007-2014 Dirk Wildt <wildt.at.die-netzmacher.de>
+ *  (c) 2008-2017 - Dirk Wildt <wildt.at.die-netzmacher.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
@@ -1091,7 +1091,7 @@ class tx_seodynamictag_pi1
 
 }
 
-if ( defined( 'TYPO3_MODE' ) && $TYPO3_CONF_VARS[ TYPO3_MODE ][ 'XCLASS' ][ 'ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php' ] )
+if ( defined( 'TYPO3_MODE' ) && $TYPO3_CONF_VARS[ TYPO3_MODE ][ 'XCLASS' ][ 'ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php' ] )
 {
-  include_once($TYPO3_CONF_VARS[ TYPO3_MODE ][ 'XCLASS' ][ 'ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php' ]);
+  include_once($TYPO3_CONF_VARS[ TYPO3_MODE ][ 'XCLASS' ][ 'ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php' ]);
 }

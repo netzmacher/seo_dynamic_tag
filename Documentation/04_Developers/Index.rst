@@ -11,16 +11,7 @@
 Developers
 ==========
 
-This is the section for TYPO3 developers.
-
-TYPO3 developers
-
-* should be familiar with TypoScript in depth.
-
-* can extend the power of SEO Dynamic Tag to your needs
-
-* can use the developer version of SEO Dynamic Tag from the GIT-repository
-
+You're welcome to imprve and develop Seo Dynamic Tag.
 
 Index
 -----

@@ -27,10 +27,10 @@ SEO Dynamic Tag 3
 		Search Engine Optimization (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
 
 	:Keywords:
-		Search Engine Optimization, SEO, canonical, keywords
+		Search Engine Optimization, SEO, canonical, keywords, meta, tags
 
 	:Copyright:
-		2008-2016
+		2008-2017
 
 	:Author:
 		Dirk Wildt (Die Netzmacher)

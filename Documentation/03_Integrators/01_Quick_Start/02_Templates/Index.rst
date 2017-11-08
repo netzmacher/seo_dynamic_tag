@@ -11,6 +11,9 @@
 Ready-for-use Templates
 =======================
 
+**DEPRECATED:** this section is deprecated, because templates from below are running
+with Seo Dynamic Tag 2 only!
+
 Extensions
 ----------
 

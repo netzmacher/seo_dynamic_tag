@@ -22,32 +22,6 @@ Workflow
 * Configure SEO Dynamic Tag by the :ref:`User Interface <integrator-configuration-constanteditor>`.
 
 
-Ready-for-use Templates
------------------------
-
-If you like to optimize one of the following extensions for search engines
-
-* Calendar Base (cal)
-
-* News (tt_news)
-
-* Shop system (tt_products)
-
-Please use a :ref:`ready-for-use-template<integrator-quick-start-templates>`.
-
-
-Ready-for-use Extensions
-------------------------
-
-The following extensions are ready-for-use with SEO Dynamic Tag:
-
-* Organiser_ - responsive TYPO3 for the Lobby and the Orgainsers -
-
-* `Quick Shop`_ - responsive e-commerce with TYPO3 -
-
-You don't need to include any further template. See :ref:`integrator-quick-start-extensions`
-
-
 Downwards-Compatibility
 -----------------------
 
@@ -63,5 +37,5 @@ Table of Content
 	:maxdepth: 3
 	:titlesonly:
 
-	01_Templates/Index
-	02_Extensions/Index
+	01_Extensions/Index
+	02_Templates/Index

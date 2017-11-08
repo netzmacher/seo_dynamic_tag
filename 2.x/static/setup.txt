@@ -22,7 +22,7 @@ plugin.tx_seodynamictag_pi1 {
         // canonical tag
       10 = USER
       10 {
-        includeLibs = typo3conf/ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php
+        includeLibs = typo3conf/ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php
         userFunc    = tx_seodynamictag_pi1->main
           // special: don't touch it!
         special     = canonical
@@ -56,7 +56,7 @@ plugin.tx_seodynamictag_pi1 {
         // meta tag author
       20 = USER
       20 {
-        includeLibs = typo3conf/ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php
+        includeLibs = typo3conf/ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php
         userFunc    = tx_seodynamictag_pi1->main
           // special: don't touch it!
         special     = author
@@ -74,7 +74,7 @@ plugin.tx_seodynamictag_pi1 {
         // meta tag description
       30 = USER
       30 {
-        includeLibs = typo3conf/ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php
+        includeLibs = typo3conf/ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php
         userFunc    = tx_seodynamictag_pi1->main
           // special: don't touch it!
         special     = description
@@ -99,7 +99,7 @@ plugin.tx_seodynamictag_pi1 {
         // meta tag keywords
       40 = USER
       40 {
-        includeLibs = typo3conf/ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php
+        includeLibs = typo3conf/ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php
         userFunc    = tx_seodynamictag_pi1->main
           // special: don't touch it!
         special     = keywords
@@ -125,7 +125,7 @@ plugin.tx_seodynamictag_pi1 {
         // title
       50 = USER
       50 {
-        includeLibs = typo3conf/ext/seo_dynamic_tag/pi1/class.tx_seodynamictag_pi1.php
+        includeLibs = typo3conf/ext/seo_dynamic_tag/2.x/pi1/class.tx_seodynamictag_pi1.php
         userFunc    = tx_seodynamictag_pi1->main
           // special: don't touch it!
         special     = title

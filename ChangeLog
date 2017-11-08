@@ -4,6 +4,7 @@
 	* #i0025: description and title got new properties:
 						* prefix and appendix by field
   Improvement
+	* #i0026: pi1/class.tx_seodynamictag_pi1.php > 2.x/pi1/class.tx_seodynamictag_pi1.php
 	* #i0024: Clean up
 						* removed
 							* doc
