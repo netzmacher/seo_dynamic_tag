@@ -1,7 +1,8 @@
 3.3.0
   171108
 	Feature
-	* #i0025: prefix and appendix by field too
+	* #i0025: description and title got new properties:
+						* prefix and appendix by field
   Improvement
 	* #i0024: Clean up
 						* removed
