@@ -301,7 +301,7 @@ plugin.tx_seodynamictag_pi1 {
 								}
 							}
 								// field = {$plugin.tx_seodynamictag.database.field.description.appendix}
-							40 = TEXT
+							40 = COA
 							40 {
 									// if.isTrue.field = {$plugin.tx_seodynamictag.database.field.description.appendix}	
 								if =
