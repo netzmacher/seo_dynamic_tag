@@ -67,7 +67,6 @@ plugin.tx_seodynamictag_pi1 {
                 10 = TEXT
                 10 {
                   field = {$plugin.tx_seodynamictag.database.field.title.prefix}
-                  crop  = {$plugin.tx_seodynamictag.crop.title.prefix} | ... | 1
                   stdWrap {
                     stripHtml         = 1
                     htmlSpecialChars  = 1
@@ -111,7 +110,6 @@ plugin.tx_seodynamictag_pi1 {
                 30 = TEXT
                 30 {
                   field       = {$plugin.tx_seodynamictag.database.field.title}
-                  crop        = {$plugin.tx_seodynamictag.crop.title} | ... | 1
                   required    = 1
                   stdWrap {
                     stripHtml         = 1
@@ -122,7 +120,6 @@ plugin.tx_seodynamictag_pi1 {
                 40 = TEXT
                 40 {
                   field       = {$plugin.tx_seodynamictag.database.field.title.appendix}
-                  crop        = {$plugin.tx_seodynamictag.crop.title.appendix} | ... | 1
                   required    = 1
                   stdWrap {
                     stripHtml         = 1
@@ -144,7 +141,10 @@ plugin.tx_seodynamictag_pi1 {
             }
 						noTrimWrap = |: ||
           }
-          wrap = <title>|</title>
+					stdWrap {
+	          wrap = <title>|</title>
+						crop  = {$plugin.tx_seodynamictag.crop.title} | ... | 1
+					}
         }
           // line feed
         30 = TEXT
@@ -249,7 +249,6 @@ plugin.tx_seodynamictag_pi1 {
 							10 = TEXT
 							10 {
 								field = {$plugin.tx_seodynamictag.database.field.description.prefix}
-								crop  = {$plugin.tx_seodynamictag.crop.description.prefix} | ... | 1
 								stdWrap {
 									stripHtml         = 1
 									htmlSpecialChars  = 1
@@ -293,7 +292,6 @@ plugin.tx_seodynamictag_pi1 {
 							30 = TEXT
 							30 {
 								field       = {$plugin.tx_seodynamictag.database.field.description}
-								crop        = {$plugin.tx_seodynamictag.crop.description} | ... | 1
 								required    = 1
 								stdWrap {
 									stripHtml         = 1
@@ -304,7 +302,6 @@ plugin.tx_seodynamictag_pi1 {
 							40 = TEXT
 							40 {
 								field       = {$plugin.tx_seodynamictag.database.field.description.appendix}
-								crop        = {$plugin.tx_seodynamictag.crop.description} | ... | 1
 								required    = 1
 								stdWrap {
 									stripHtml         = 1
@@ -336,6 +333,9 @@ plugin.tx_seodynamictag_pi1 {
 							wrap      = |
 							required  = 1
 						}
+					}
+					stdWrap {
+						crop  = {$plugin.tx_seodynamictag.crop.description} | ... | 1
 					}
 				}
       }
@@ -373,7 +373,6 @@ plugin.tx_seodynamictag_pi1 {
 							cObject = TEXT
 							cObject {
 								field = {$plugin.tx_seodynamictag.database.field.keywords}
-								crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
 									// ifEmpty.field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
 								stdWrap =
 								stdWrap {
@@ -381,7 +380,6 @@ plugin.tx_seodynamictag_pi1 {
 									ifEmpty = TEXT
 									ifEmpty {
 										field = {$plugin.tx_seodynamictag.database.field.keywords.cover}
-										crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
 										stdWrap {
 											replacement {
 													// bracket ( > null
@@ -469,6 +467,9 @@ plugin.tx_seodynamictag_pi1 {
 						value     = {$plugin.tx_seodynamictag.keywords.appendix}
 						wrap      = ,|
 						required  = 1
+					}
+					stdWrap {
+						crop  = {$plugin.tx_seodynamictag.crop.keywords} | | 1
 					}
 				}
 			}

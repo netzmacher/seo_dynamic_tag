@@ -22,10 +22,6 @@ plugin.tx_seodynamictag {
   crop.keywords         = 100
   # cat=Seo Dynamic Tag - Crop//103;   type=int+;                 label= Title: Crop title after X chars (whole words will cropped).
   crop.title						= 100
-  # cat=Seo Dynamic Tag - Crop//104;   type=int+;                 label= Title prefix: Crop title prefix after X chars (whole words will cropped).
-  crop.title.prefix     = 100
-  # cat=Seo Dynamic Tag - Crop//105;   type=int+;                 label= Title appendix: Crop title appendix after X chars (whole words will cropped).
-  crop.title.appendix   = 100
 
   # cat=Seo Dynamic Tag - Database*//100;   type=string;          label= Table*:*Obligate! The from table in the SQL query. Example: tt_news
   database.table              =
