@@ -442,18 +442,16 @@ plugin.tx_seodynamictag_pi1 {
 													}
 													replace = ,
 												}
-													// underscore > space
+													// - > ,
 												80 =
 												80 {
-													search = _
-													replace {
-														char = 32
-													}
+													search = -
+													replace = ,
 												}
-													// - > space
+													// underscore > space
 												90 =
 												90 {
-													search = -
+													search = _
 													replace {
 														char = 32
 													}
