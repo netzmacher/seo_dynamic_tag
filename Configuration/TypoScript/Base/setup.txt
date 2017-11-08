@@ -242,15 +242,6 @@ plugin.tx_seodynamictag_pi1 {
 								noTrimWrap  = |uid = ||
 							}
 						}
-						renderObj = TEXT
-						renderObj {
-							field = {$plugin.tx_seodynamictag.database.field.description}
-							crop  = {$plugin.tx_seodynamictag.crop.description} | ... | 1
-							stdWrap {
-								stripHtml         = 1
-								htmlSpecialChars  = 1
-							}
-						}
 							// field = {$plugin.tx_seodynamictag.database.field.description.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.description.appendix}
 						renderObj = COA
 						renderObj {
