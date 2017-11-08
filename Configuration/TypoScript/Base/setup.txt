@@ -321,7 +321,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									field       = {$plugin.tx_seodynamictag.database.field.description.appendix}
-									crop        = {$plugin.tx_seodynamictag.crop.description.appendix} | ... | 1
+									crop        = {$plugin.tx_seodynamictag.crop.description} | ... | 1
 									required    = 1
 									stdWrap {
 										stripHtml         = 1
