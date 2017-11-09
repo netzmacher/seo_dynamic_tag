@@ -34,5 +34,5 @@ Because of this changing SEO Dynamic Tag 2 has some other configuration properti
 
 If you have any question, please refer to the former manual:
 
-* :raw-html:`<a href="/typo3conf/ext/seo_dynamic_tag/Resources/Private/2.x/doc/manual.pdf" target="_blank">Manual SEO Dynamic Tag 2 (pdf)</a>`
+* :raw-html:`<a href="https://docs.typo3.org/typo3cms/extensions/seo_dynamic_tag/2.4.3/" target="_blank">Manual SEO Dynamic Tag 2</a>`
 

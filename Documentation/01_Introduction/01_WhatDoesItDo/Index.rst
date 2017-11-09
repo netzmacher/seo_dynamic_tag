@@ -9,7 +9,7 @@
 What does it do?
 ================
 
-SEO Dynamic Tag supports the Search Engine Optimization of your TYPO3 website.
+SEO Dynamic Tag supports the Search Engine Optimisation of your TYPO3 website.
 
 You can generate search HTML tags for records of every TYPO3 extension automatically for the
 

@@ -24,10 +24,10 @@ SEO Dynamic Tag 3
 		en
 
 	:Description:
-		Search Engine Optimization (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
+		Search Engine Optimisation (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
 
 	:Keywords:
-		Search Engine Optimization, SEO, canonical, keywords, meta, tags
+		Search Engine Optimisation, SEO, canonical, keywords, meta, tags
 
 	:Copyright:
 		2008-2017

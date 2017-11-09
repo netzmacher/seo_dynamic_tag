@@ -1,5 +1,5 @@
 # SEO Dynamic Tag 3
-Search Engine Optimization (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
+Search Engine Optimisation (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
 
 ## Manuals
 + https://gitlab.die-netzmacher.de/typo3/seo_dynamic_tag/tree/master/doc
