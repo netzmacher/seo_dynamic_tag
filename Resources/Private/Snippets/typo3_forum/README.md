@@ -1,4 +1,4 @@
-# Snippet
+# TYPO3 Forum
 Sarch Engine Optimisation for displaying foums and topics on the same page
 
 ## Files
