@@ -11,6 +11,11 @@
 Best Practise
 =============
 
+Usually you can configure SEO Dynamic Tag with the user-interface, the 
+Constant Editor.
+
+But some times you can meet requirements only, if you are editing TypoScript directly.
+
 
 Table of Content
 ----------------
