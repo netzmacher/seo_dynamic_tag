@@ -1,8 +1,9 @@
 # TYPO3 Forum
-Sarch Engine Optimisation for displaying foums and topics on the same page
+Search Engine Optimisation for displaying foums and topics on the same page
 
 ## Files
 + setup.ts
++ https://gitlab.die-netzmacher.de/typo3/seo_dynamic_tag/blob/master/Resources/Private/Snippets/typo3_forum/setup.ts
 
 ## Page ID
 The page id in the snippet is 1120.
