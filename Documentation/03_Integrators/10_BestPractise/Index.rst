@@ -3,19 +3,20 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
 
 
-.. _integrators:
+.. _integrator_bestpractise:
 
-Integrators
-===========
+Best Practise
+=============
+
+
+Table of Content
+----------------
 
 .. toctree::
 	:maxdepth: 3
 	:titlesonly:
 
-	01_Quick_Start/Index
-	02_Configuration/Index
-	10_BestPractise/Index
-	90_Downgrade/Index
+	90_TYPO3Forum/Index
