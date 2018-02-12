@@ -4,10 +4,10 @@
 
 ---
 conf.py:
-  copyright: 2008-2017
+  copyright: 2008-2018
   project: SEO Dynamic Tag 3
-  version: 3.3
-  release: 3.3.0
+  version: 3.4
+  release: 3.4.0
   latex_documents:
   - - Index
     - seo_dynamic_tag.tex

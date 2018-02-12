@@ -30,7 +30,7 @@ SEO Dynamic Tag 3
 		Search Engine Optimisation, SEO, canonical, keywords, meta, tags
 
 	:Copyright:
-		2008-2017
+		2008-2018
 
 	:Author:
 		Dirk Wildt (Die Netzmacher)

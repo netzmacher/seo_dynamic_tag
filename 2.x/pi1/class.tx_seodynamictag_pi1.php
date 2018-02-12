@@ -3,7 +3,7 @@
 /* * *************************************************************
  *  Copyright notice
  *
- *  (c) 2008-2017 - Dirk Wildt <wildt.at.die-netzmacher.de>
+ *  (c) 2008-2018 - Dirk Wildt <wildt.at.die-netzmacher.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is

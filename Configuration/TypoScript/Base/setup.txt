@@ -42,7 +42,7 @@ plugin.tx_seodynamictag_pi1 {
 					}
 					19 = TEXT
 					19 {
-						  // #i0023, 180212, dwildt, 1+
+						  // #i0029, 180212, dwildt, 1+
 						if.isFalse.data = GP:{$plugin.tx_seodynamictag.database.gp}
 						value = SEO Dynamic Tag: GP:{$plugin.tx_seodynamictag.database.gp} is null!
 						lang {
@@ -53,7 +53,7 @@ plugin.tx_seodynamictag_pi1 {
 						// {$plugin.tx_seodynamictag.database.table}: field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
           20 = COA
           20 {
-						  // #i0023, 180212, dwildt, 1+
+						  // #i0029, 180212, dwildt, 1+
 						if.isTrue.data = GP:{$plugin.tx_seodynamictag.database.gp}
 							// {$plugin.tx_seodynamictag.database.table}: field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
 						20 = COA
@@ -204,7 +204,7 @@ plugin.tx_seodynamictag_pi1 {
             // {$plugin.tx_seodynamictag.database.table}.{$plugin.tx_seodynamictag.database.field.author}
           cObject = COA
           cObject {
-						  // #i0023, 180212, dwildt, 1+
+						  // #i0029, 180212, dwildt, 1+
 						if.isTrue.data = GP:{$plugin.tx_seodynamictag.database.gp}
 						10 = COA
 						10 {
@@ -254,7 +254,7 @@ plugin.tx_seodynamictag_pi1 {
 						// {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
 					20 = COA
 					20 {
-						  // #i0023, 180212, dwildt, 1+
+						  // #i0029, 180212, dwildt, 1+
 						if.isTrue.data = GP:{$plugin.tx_seodynamictag.database.gp}
 							// {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.description}
 						20 = CONTENT
@@ -382,7 +382,7 @@ plugin.tx_seodynamictag_pi1 {
 						// table = {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords} and ifEmpty {$plugin.tx_seodynamictag.database.field.keywords.cover}
 					20 = COA
 					20 {
-						  // #i0023, 180212, dwildt, 1+
+						  // #i0029, 180212, dwildt, 1+
 						if.isTrue.data = GP:{$plugin.tx_seodynamictag.database.gp}
 							// table = {$plugin.tx_seodynamictag.database.table}: {$plugin.tx_seodynamictag.database.field.keywords} and ifEmpty {$plugin.tx_seodynamictag.database.field.keywords.cover}
 						20 = CONTENT
