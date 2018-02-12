@@ -1,3 +1,8 @@
+3.4.0
+  180212
+	Feature
+	* #i0023: Error management in case of an unproper configuration (here: missing uid)
+
 3.3.1
   171109
 	Feature
