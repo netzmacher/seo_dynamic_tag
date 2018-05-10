@@ -2,6 +2,7 @@
   180212
 	Feature
 	* #i0029: Error management in case of an unproper configuration (here: missing uid)
+						and a buggy SQL statement.
 	Improvement
 	* #i0028: Upadate (c) 2018
 
