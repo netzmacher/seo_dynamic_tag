@@ -78,7 +78,11 @@ plugin.tx_seodynamictag {
 	database.field.title					= title // header // subject
   # cat=Seo Dynamic Tag - Meta Title//400;   type=string;         label= Appendix field:Field is appended the title tag. Example for a field: short. Example for a constant: "my short".
   database.field.title.appendix = 
-  # cat=Seo Dynamic Tag - Meta Title//401;   type=string;					label= Appendix value: String will appended to the title tag.
+  # cat=Seo Dynamic Tag - Meta Title//401;   type=options[default,strftime];  label= Appendix case:Default or strftime
+  database.case.title.appendix = default
+  # cat=Seo Dynamic Tag - Meta Title//402;   type=string;  label= Appendix strftime:date format in case of strftime (see above).
+  database.strftime.title.appendix = %x %H:%M h
+  # cat=Seo Dynamic Tag - Meta Title//403;   type=string;					label= Appendix value: String will appended to the title tag.
   title.appendix								=
 
   # cat=Seo Dynamic Tag - page object//100;   type=string;        label= Label:The label of your page in your TypoScript configuration. Usually: page

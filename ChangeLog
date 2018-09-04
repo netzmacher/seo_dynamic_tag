@@ -1,3 +1,17 @@
+3.4.1
+  180904
+	Feature
+	* #i0030: Field appendix can handled by strftime:
+						* page.headerData.49442.20.20.20.10.renderObj.40 is moved from TEXT to CASE
+						New properties at the Constant Editor:
+						* Category > SEO DYNAMIC TAG - META TITLE
+							* Appendix case
+							* Appendix strftime
+						Affected files:
+						* Configuration/TypoScript/Base
+							* constants.txt
+							* setup.txt
+
 3.4.0
   180212
 	Feature

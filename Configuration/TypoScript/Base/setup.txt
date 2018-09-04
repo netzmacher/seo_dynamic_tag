@@ -131,16 +131,33 @@ plugin.tx_seodynamictag_pi1 {
 											htmlSpecialChars  = 1
 										}
 									}
-										// field = {$plugin.tx_seodynamictag.database.field.title.appendix}
-									40 = TEXT
+										// key = {$plugin.tx_seodynamictag.database.case.title.appendix}. field = {$plugin.tx_seodynamictag.database.field.title.appendix}
+									40 = CASE
 									40 {
-										field       = {$plugin.tx_seodynamictag.database.field.title.appendix}
-										required    = 1
-										stdWrap {
-											stripHtml         = 1
-											htmlSpecialChars  = 1
+										key = {$plugin.tx_seodynamictag.database.case.title.appendix}
+											// field = {$plugin.tx_seodynamictag.database.field.title.appendix}
+										default = TEXT
+										default {
+											field       = {$plugin.tx_seodynamictag.database.field.title.appendix}
+											required    = 1
+											stdWrap {
+												stripHtml         = 1
+												htmlSpecialChars  = 1
+											}
+											noTrimWrap = |: ||
 										}
-										noTrimWrap = |: ||
+											// field = {$plugin.tx_seodynamictag.database.field.title.appendix}, strftime = %x
+										strftime = TEXT
+										strftime {
+											field       = {$plugin.tx_seodynamictag.database.field.title.appendix}
+											required    = 1
+											stdWrap {
+												stripHtml         = 1
+												htmlSpecialChars  = 1
+												strftime = {$plugin.tx_seodynamictag.database.strftime.title.appendix}
+											}
+											noTrimWrap = |: ||
+										}
 									}
 								}
 							}
