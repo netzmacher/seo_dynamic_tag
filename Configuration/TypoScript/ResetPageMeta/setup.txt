@@ -10,7 +10,7 @@
   //
   // page.meta
 
-{$plugin.tx_seodynamictag.page.tsProperty} {
+page {
   meta {
     author >
     author = {$plugin.tx_seodynamictag.default.author}
