@@ -12,6 +12,11 @@
 Social media
 ============
 
+If you like to **publish images**, you have to configure the new property "Field image" in 
+the database section. Please refer to:
+
+* :ref:`Integrators > Setup > Database <integrator_setup_database>`
+
 
 **Table of contens**
 

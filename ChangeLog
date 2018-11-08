@@ -2,14 +2,17 @@
   181106
 	Feature
 	* #t2763: Tags for social media
-						98. Downgrade to SEO Dynamic Tag 3: 
+						1.	Details at Manual: Integrators / Setup / Social Media
+            2.	More details at Manual: Waht's new / 4.0
+						3.	Downgrade to SEO Dynamic Tag 3: 
 								* Include the static template: "SEO Dynamic Tag 3 [deprecated]"
-						99. No support for SEO Dynamic Tag 2 anymore
+						4.	SEO Dynamic Tag 2
+								* Support is terminated!
 						=========
 						ATTENTION
 						=========
-						* Constant plugin.tx_seodynamictag.page.tsProperty is removed. This is of relevance, if
-							you had configured seo_dynamic_tag for a PAGE object, which isn't named page.
+						* Constant plugin.tx_seodynamictag.page.tsProperty is removed. This is of relevance only,
+							if you had configured seo_dynamic_tag for a PAGE object, which isn't named page.
 
 3.4.1
   180904

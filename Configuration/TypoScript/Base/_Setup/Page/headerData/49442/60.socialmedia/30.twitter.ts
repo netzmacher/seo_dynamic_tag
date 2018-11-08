@@ -43,7 +43,6 @@ plugin.tx_seodynamictag_pi1 {
 									if =
 									if.isTrue.data = register:seodyntag_imagePublicUrl
 									value = summary_large_image
-									value = summary
 								}
 									// value = summary, if.negate.isTrue.data = register:seodyntag_imagePublicUrl 
 								20 = TEXT
