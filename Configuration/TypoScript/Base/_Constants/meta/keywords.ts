@@ -10,5 +10,7 @@ plugin.tx_seodynamictag {
   keywords.appendix         =
   # cat=Seo Dynamic Tag - Meta Keywords//402;   type=int+;        label= Crop: Crop keywords after X chars (whole words will cropped).
   crop.keywords         = 100
+  # cat=Seo Dynamic Tag - Meta Keywords//500;   type=string;			label= Default: Default keywords, if current record doesn't contain any keyword. For single views only. Leave it empty, if you don't like default keywords.
+  default.keywords    = TYPO3, SEO, SEO Dynamic Tag
 
 }

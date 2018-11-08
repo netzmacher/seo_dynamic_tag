@@ -8,6 +8,9 @@ plugin.tx_seodynamictag_pi1 {
 						// opengraph: comment, og:title, article (og:type, og:article), og:url, og:image, og:site_name, fb:admin
 					20 = COA
 					20 {
+							// isFalse = $plugin.tx_seodynamictag.socialmedia.opengraph.disabled (here: {$plugin.tx_seodynamictag.socialmedia.opengraph.disabled})
+						if =
+						if.isFalse = {$plugin.tx_seodynamictag.socialmedia.opengraph.disabled}
 							// 10: line feed. 20: comment
 						10 = COA
 						10 {
@@ -95,31 +98,37 @@ plugin.tx_seodynamictag_pi1 {
 								// 10: line feed. 20: article:section
 							40 = COA
 							40 {
+									// isTrue.data = page:title
+								if =
+								if.isTrue.data = page:title
 									// line feed
 								10 = TEXT
 								10 {
 									char = 10
 								}
-									// article:section: value = Article Section
+									// article:section: data = page:title
 								20 = TEXT
 								20 {
-									value = Article Section
-									noTrimWrap = |  <!-- <meta property="article:section" content="|"> -->|
+									data = page:title
+									noTrimWrap = |  <meta property="article:section" content="|">|
 								}
 							}
 								// 10: line feed. 20: article:tag
 							50 = COA
 							50 {
+									// isTrue.data = register:seodyntag_keywords
+								if =
+								if.isTrue.data = register:seodyntag_keywords
 									// line feed
 								10 = TEXT
 								10 {
 									char = 10
 								}
-									// article:tag: value = Article Tag
+									// article:tag: register:seodyntag_keywords
 								20 = TEXT
 								20 {
-									value = Article Tag
-									noTrimWrap = |  <!-- <meta property="article:tag" content="|"> -->|
+									data = register:seodyntag_keywords
+									noTrimWrap = |  <meta property="article:tag" content="|">|
 								}
 							}
 						}
@@ -173,6 +182,9 @@ plugin.tx_seodynamictag_pi1 {
 								// og:image:width
 							20 = COA
 							20 {
+									// isTrue.data = register:seodyntag_imagePublicUrl
+								if =
+								if.isTrue.data = register:seodyntag_imagePublicUrl
 									// line feed
 								10 = TEXT
 								10 {
@@ -188,6 +200,9 @@ plugin.tx_seodynamictag_pi1 {
 								// og:image:height: data = register:seodyntag_imageHeight
 							30 = COA
 							30 {
+									// isTrue.data = register:seodyntag_imageHeight
+								if =
+								if.isTrue.data = register:seodyntag_imageHeight
 									// line feed
 								10 = TEXT
 								10 {
@@ -203,6 +218,9 @@ plugin.tx_seodynamictag_pi1 {
 								// og:image:alt
 							40 = COA
 							40 {
+									// isTrue.data = register:seodyntag_alt
+								if =
+								if.isTrue.data = register:seodyntag_alt
 									// line feed
 								10 = TEXT
 								10 {
@@ -219,6 +237,9 @@ plugin.tx_seodynamictag_pi1 {
 							// 10: line feed. 20: og:description
 						60 = COA
 						60 {
+								// isTrue.data = register:seodyntag_description
+							if =
+							if.isTrue.data = register:seodyntag_description
 								// line feed
 							10 = TEXT
 							10 {
@@ -231,34 +252,40 @@ plugin.tx_seodynamictag_pi1 {
 								noTrimWrap = |  <meta property="og:description" content="|">|
 							}
 						}
-							// og:site_name
+							// og:site_name: data = page:title
 						70 = COA
 						70 {
+								// isTrue.data = page:title
+							if =
+							if.isTrue.data = page:title
 								// line feed
 							10 = TEXT
 							10 {
 								char = 10
 							}
-								// og:site_name
+								// og:site_name: data = page:title
 							20 = TEXT
 							20 {
-								value = A description of what is in the image (not a caption).
-								noTrimWrap = |  <!-- <meta property="og:site_name" content="|"> -->|
+								data = page:title
+								noTrimWrap = |  <meta property="og:site_name" content="|">|
 							}
 						}
 							// fb:admins
 						80 = COA
 						80 {
+								// isFalse = $plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid (here: {$plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid})
+							if =
+							if.isTrue = {$plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid}
 								// line feed
 							10 = TEXT
 							10 {
 								char = 10
 							}
-								// fb:admins
+								// fb:admins: value = {$plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid}
 							20 = TEXT
 							20 {
-								value = Facebook numberic ID
-								noTrimWrap = |  <!-- <meta property="fb:admins" content="|"> -->|
+								value = {$plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid}
+								noTrimWrap = |  <meta property="fb:admins" content="|">|
 							}
 						}
 					}

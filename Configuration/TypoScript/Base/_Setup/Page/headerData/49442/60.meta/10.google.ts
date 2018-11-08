@@ -8,6 +8,9 @@ plugin.tx_seodynamictag_pi1 {
 						// google: comment, name, description, image
 					10 = COA
 					10 {
+							// isFalse = $plugin.tx_seodynamictag.socialmedia.google.disabled (here: {$plugin.tx_seodynamictag.socialmedia.google.disabled})
+						if =
+						if.isFalse = {$plugin.tx_seodynamictag.socialmedia.google.disabled}
 							// 10: line feed. 20: comment
 						10 = COA
 						10 {
@@ -41,6 +44,9 @@ plugin.tx_seodynamictag_pi1 {
 							// 10: line feed. 20: description
 						30 = COA
 						30 {
+								// isTrue.data = register:seodyntag_description
+							if =
+							if.isTrue.data = register:seodyntag_description
 								// line feed
 							10 = TEXT
 							10 {

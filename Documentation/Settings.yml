@@ -5,13 +5,13 @@
 ---
 conf.py:
   copyright: 2008-2018
-  project: SEO Dynamic Tag 3
-  version: 3.4
-  release: 3.4.0
+  project: SEO Dynamic Tag 4
+  version: 4.0
+  release: 4.0.0
   latex_documents:
   - - Index
     - seo_dynamic_tag.tex
-    - SEO Dynamic Tag 3
+    - SEO Dynamic Tag 4
     - Dirk Wildt (Die Netzmacher)
     - manual
   latex_elements:

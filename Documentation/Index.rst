@@ -8,9 +8,9 @@
 
 .. _start:
 
-=============================================================
-SEO Dynamic Tag 3
-=============================================================
+=================
+SEO Dynamic Tag 4
+=================
 
 .. only:: html
 
@@ -24,10 +24,10 @@ SEO Dynamic Tag 3
 		en
 
 	:Description:
-		Search Engine Optimisation (SEO) for the title tag, the canonical tag and the meta tags author, description and keywords.
+		Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter.
 
 	:Keywords:
-		Search Engine Optimisation, SEO, canonical, keywords, meta, tags
+		Search Engine Optimisation, SEO, canonical, keywords, meta, tags, google, opengraph, facebook, twitter
 
 	:Copyright:
 		2008-2018
@@ -54,8 +54,10 @@ Table of Contents
 	:maxdepth: 3
 	:titlesonly:
 
-	01_Introduction/Index
-	02_Editors/Index
-	03_Integrators/Index
-	04_Developers/Index
-	99_Help/Index
+	Introduction/Index
+	Editors/Index
+	Integrators/Index
+	Developers/Index
+	Upgrades/Index
+	WhatsNew/Index
+	Help/Index

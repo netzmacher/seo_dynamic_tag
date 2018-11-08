@@ -4,7 +4,7 @@ plugin.tx_seodynamictag_pi1 {
       49442 {
         60 {
         }
-          // meta: 10: google, 20: opengraph (facebook), 30: twitter
+          // social media: 10: google, 20: opengraph (facebook), 30: twitter
         60 = COA
         60 {
         }

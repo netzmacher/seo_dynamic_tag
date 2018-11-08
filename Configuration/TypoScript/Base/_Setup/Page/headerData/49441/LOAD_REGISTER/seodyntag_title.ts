@@ -4,10 +4,10 @@ plugin.tx_seodynamictag_pi1 {
 				// Empty statement for proper comments only
       49441 {
 			}
-        // 10: seodyntag_title. renderObj below: seodyntag_crdate, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth
+        // 10: seodyntag_title. renderObj below: seodyntag_crdate, seodyntag_keywords, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth. field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
       49441 = COA
       49441 {
-					// 10: LOAD_REGISTER seodyntag_title. XXX30: for development only
+					// 20: LOAD_REGISTER seodyntag_title and others. XXX30: for development only
 				10 = COA
 				10 {
 						// seodyntag_title
@@ -38,7 +38,7 @@ plugin.tx_seodynamictag_pi1 {
 										en = SEO Dynamic Tag: GP:{$plugin.tx_seodynamictag.database.gp} is null!
 									}
 								}
-									// {$plugin.tx_seodynamictag.database.table}: field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
+									// seodyntag_crdate, seodyntag_keywords, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth. field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
 								20 = COA
 								20 {
 										// #i0029, 180212, dwildt, 1+
@@ -63,10 +63,10 @@ plugin.tx_seodynamictag_pi1 {
 													noTrimWrap  = |uid = ||
 												}
 											}
-												// field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
+												// seodyntag_crdate, seodyntag_keywords, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth. field = {$plugin.tx_seodynamictag.database.field.title.prefix}, devider, field = {$plugin.tx_seodynamictag.database.field.title.appendix}
 											renderObj = COA
 											renderObj {
-													// seodyntag_crdate, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth
+													// seodyntag_crdate, seodyntag_keywords, seodyntag_imagePublicUrl, seodyntag_tstamp. renderObj below: seodyntag_imageHeight, seodyntag_imageWidth
 												10 = LOAD_REGISTER
 												10 {
 													seodyntag_crdate {
@@ -76,6 +76,13 @@ plugin.tx_seodynamictag_pi1 {
 															field = crdate
 														}
 													}
+													seodyntag_keywords {
+															// value = {$plugin.tx_seodynamictag.database.field.keywords}
+														cObject = TEXT
+														cObject {
+															value = {$plugin.tx_seodynamictag.database.field.keywords}
+														}
+													}
 													seodyntag_imagePublicUrl {
 															// data = file:current:publicUrl WITH ABSOLUTE URL!
 														cObject = FILES
@@ -83,8 +90,7 @@ plugin.tx_seodynamictag_pi1 {
 															references {
 																table = {$plugin.tx_seodynamictag.database.table}
 																uid.field = uid
-																	// :TODO: 181107: constant!
-																fieldName = image
+																fieldName = {$plugin.tx_seodynamictag.database.field.image}
 															}
 															begin = 0
 															maxItems = 1
