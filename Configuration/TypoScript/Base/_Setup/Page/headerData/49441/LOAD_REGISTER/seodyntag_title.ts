@@ -81,6 +81,10 @@ plugin.tx_seodynamictag_pi1 {
 														cObject = TEXT
 														cObject {
 															value = {$plugin.tx_seodynamictag.database.field.keywords}
+															stdWrap {
+																stripHtml         = 1
+																htmlSpecialChars  = 1
+															}
 														}
 													}
 													seodyntag_imagePublicUrl {
@@ -115,6 +119,10 @@ plugin.tx_seodynamictag_pi1 {
 																						}
 																					}
 																				}
+																			}
+																			stdWrap {
+																				stripHtml         = 1
+																				htmlSpecialChars  = 1
 																			}
 																		}
 																	}
