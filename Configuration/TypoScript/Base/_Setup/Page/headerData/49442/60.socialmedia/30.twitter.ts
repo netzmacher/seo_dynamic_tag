@@ -26,42 +26,34 @@ plugin.tx_seodynamictag_pi1 {
 								noTrimWrap = |  <!-- | -->|
 							}
 						}
-							// 10: twitter:image:src. 20: twitter:card.
+						// 10: line feed. 20: twitter:card
 						20 = COA
 						20 {
-								// isTrue.data = register:seodyntag_imagePublicUrl
-							if =
-							if.isTrue.data = register:seodyntag_imagePublicUrl
-								// 10: line feed. 20: twitter:image:src
-							10 = COA
+								// line feed
+							10 = TEXT
 							10 {
-									// line feed
-								10 = TEXT
-								10 {
-									char = 10
-								}
-									// twitter:image:src: data = register:seodyntag_imagePublicUrl
-								20 = TEXT
-								20 {
-									data = register:seodyntag_imagePublicUrl
-									noTrimWrap = |  <meta name="twitter:image:src" content="|">|
-								}
+								char = 10
 							}
-							// 10: line feed. 20: twitter:card
 							20 = COA
 							20 {
-									// isTrue.data = register:seodyntag_alt
-								if =
-								if.isTrue.data = register:seodyntag_alt
-									// line feed
+									// value = summary_large_image, if.isTrue.data = register:seodyntag_imagePublicUrl 
 								10 = TEXT
 								10 {
-									char = 10
+										// isTrue.data = register:seodyntag_imagePublicUrl
+									if =
+									if.isTrue.data = register:seodyntag_imagePublicUrl
+									value = summary_large_image
 								}
-									// twitter:card: data = register:seodyntag_alt
+									// value = summary, if.negate.isTrue.data = register:seodyntag_imagePublicUrl 
 								20 = TEXT
 								20 {
-									data = register:seodyntag_alt
+										// isTrue.data = register:seodyntag_imagePublicUrl
+									if =
+									if.isTrue.data = register:seodyntag_imagePublicUrl
+									if.negate = 1
+									value = summary
+								}
+								stdWrap {
 									noTrimWrap = |  <meta name="twitter:card" content="|">|
 								}
 							}
@@ -114,9 +106,27 @@ plugin.tx_seodynamictag_pi1 {
 								noTrimWrap = |  <meta name="twitter:description" content="|">|
 							}
 						}
+							// 10: line feed. 20: twitter:image:src
+						60 = COA
+						60 {
+								// isTrue.data = register:seodyntag_imagePublicUrl
+							if =
+							if.isTrue.data = register:seodyntag_imagePublicUrl
+								// line feed
+							10 = TEXT
+							10 {
+								char = 10
+							}
+								// twitter:image:src: data = register:seodyntag_imagePublicUrl
+							20 = TEXT
+							20 {
+								data = register:seodyntag_imagePublicUrl
+								noTrimWrap = |  <meta name="twitter:image:src" content="|">|
+							}
+						}
 #							// 10: line feed. 20: twitter:creator
-#						60 = COA
-#						60 {
+#						70 = COA
+#						70 {
 #								// line feed
 #							10 = TEXT
 #							10 {

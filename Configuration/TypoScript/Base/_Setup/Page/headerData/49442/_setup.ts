@@ -52,4 +52,4 @@ plugin.tx_seodynamictag_pi1 {
 }
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49442/20.title.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49442/40.canonical.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49442/60.meta.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49442/60.socialmedia.ts">
