@@ -38,7 +38,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_title
-								noTrimWrap = |  <meta itemprop="name" content="|">|
+								noTrimWrap = |  <meta itemprop="name" content="|" />|
 							}
 						}
 							// 10: line feed. 20: description
@@ -56,7 +56,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_description
-								noTrimWrap = |  <meta itemprop="description" content="|">|
+								noTrimWrap = |  <meta itemprop="description" content="|" />|
 							}
 						}
 							// 10: line feed. 20: image
@@ -74,7 +74,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_imagePublicUrl
-								noTrimWrap = |  <meta itemprop="image" content="|">|
+								noTrimWrap = |  <meta itemprop="image" content="|" />|
 							}
 						}
 					}

@@ -54,7 +54,7 @@ plugin.tx_seodynamictag_pi1 {
 									value = summary
 								}
 								stdWrap {
-									noTrimWrap = |  <meta name="twitter:card" content="|">|
+									noTrimWrap = |  <meta name="twitter:card" content="|" />|
 								}
 							}
 						}
@@ -73,7 +73,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								value = {$plugin.tx_seodynamictag.socialmedia.twitter.site}
-								noTrimWrap = |  <meta name="twitter:site" content="|">|
+								noTrimWrap = |  <meta name="twitter:site" content="|" />|
 							}
 						}
 							// 10: line feed. 20: twitter:title
@@ -88,7 +88,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_title
-								noTrimWrap = |  <meta name="twitter:title" content="|">|
+								noTrimWrap = |  <meta name="twitter:title" content="|" />|
 							}
 						}
 							// 10: line feed. 20: twitter:description
@@ -103,7 +103,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_description
-								noTrimWrap = |  <meta name="twitter:description" content="|">|
+								noTrimWrap = |  <meta name="twitter:description" content="|" />|
 							}
 						}
 							// 10: line feed. 20: twitter:image:src
@@ -121,7 +121,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_imagePublicUrl
-								noTrimWrap = |  <meta name="twitter:image:src" content="|">|
+								noTrimWrap = |  <meta name="twitter:image:src" content="|" />|
 							}
 						}
 #							// 10: line feed. 20: twitter:creator
@@ -136,7 +136,7 @@ plugin.tx_seodynamictag_pi1 {
 #							20 = TEXT
 #							20 {
 #								value = @author_handle
-#								noTrimWrap = |  <meta name="twitter:creator" content="|">|
+#								noTrimWrap = |  <meta name="twitter:creator" content="|" />|
 #							}
 #						}
 					}

@@ -38,7 +38,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_title
-								noTrimWrap = |  <meta property="og:title" content="|">|
+								noTrimWrap = |  <meta property="og:title" content="|" />|
 							}
 						}
 							// article: 10: og:type. 20: article:published_time. 30: article:modified_time. 40: article:section. 50: article:tag
@@ -56,7 +56,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									value = article
-									noTrimWrap = |  <meta property="og:type" content="|">|
+									noTrimWrap = |  <meta property="og:type" content="|" />|
 								}
 							}
 								// 10: line feed. 20: article:published_time
@@ -74,7 +74,7 @@ plugin.tx_seodynamictag_pi1 {
 									data = register:seodyntag_crdate
 									//strftime = 2013-09-17T05:59:00
 									strftime = %Y-%m-%dT%T
-									noTrimWrap = |  <meta property="article:published_time" content="|">|
+									noTrimWrap = |  <meta property="article:published_time" content="|" />|
 								}
 							}
 								// 10: line feed. 20: article:modified_time
@@ -92,7 +92,7 @@ plugin.tx_seodynamictag_pi1 {
 									data = register:seodyntag_tstamp
 									//strftime = 2013-09-17T05:59:00
 									strftime = %Y-%m-%dT%T
-									noTrimWrap = |  <meta property="article:modified_time" content="|">|
+									noTrimWrap = |  <meta property="article:modified_time" content="|" />|
 								}
 							}
 								// 10: line feed. 20: article:section
@@ -110,7 +110,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = page:title
-									noTrimWrap = |  <meta property="article:section" content="|">|
+									noTrimWrap = |  <meta property="article:section" content="|" />|
 								}
 							}
 								// 10: line feed. 20: article:tag
@@ -128,7 +128,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = register:seodyntag_keywords
-									noTrimWrap = |  <meta property="article:tag" content="|">|
+									noTrimWrap = |  <meta property="article:tag" content="|" />|
 								}
 							}
 						}
@@ -155,7 +155,7 @@ plugin.tx_seodynamictag_pi1 {
 									returnLast        = url
 									useCacheHash      = {$plugin.tx_seodynamictag.canonical.useCashHash}
 								}
-								noTrimWrap = |  <meta property="og:url" content="|">|
+								noTrimWrap = |  <meta property="og:url" content="|" />|
 							}
 						}
 							// 10: og:image. 20: og:image:width. 30: og:image:height. 40: og:image:alt. 
@@ -176,7 +176,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = register:seodyntag_imagePublicUrl
-									noTrimWrap = |  <meta property="og:image" content="|">|
+									noTrimWrap = |  <meta property="og:image" content="|" />|
 								}
 							}
 								// og:image:width
@@ -194,7 +194,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = register:seodyntag_imageWidth
-									noTrimWrap = |  <meta property="og:image:width" content="|">|
+									noTrimWrap = |  <meta property="og:image:width" content="|" />|
 								}
 							}
 								// og:image:height: data = register:seodyntag_imageHeight
@@ -212,7 +212,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = register:seodyntag_imageHeight
-									noTrimWrap = |  <meta property="og:image:height" content="|">|
+									noTrimWrap = |  <meta property="og:image:height" content="|" />|
 								}
 							}
 								// og:image:alt
@@ -230,7 +230,7 @@ plugin.tx_seodynamictag_pi1 {
 								20 = TEXT
 								20 {
 									data = register:seodyntag_alt
-									noTrimWrap = |  <meta property="og:image:alt" content="|">|
+									noTrimWrap = |  <meta property="og:image:alt" content="|" />|
 								}
 							}
 						}
@@ -249,7 +249,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = register:seodyntag_description
-								noTrimWrap = |  <meta property="og:description" content="|">|
+								noTrimWrap = |  <meta property="og:description" content="|" />|
 							}
 						}
 							// og:site_name: data = page:title
@@ -267,7 +267,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								data = page:title
-								noTrimWrap = |  <meta property="og:site_name" content="|">|
+								noTrimWrap = |  <meta property="og:site_name" content="|" />|
 							}
 						}
 							// fb:admins
@@ -285,7 +285,7 @@ plugin.tx_seodynamictag_pi1 {
 							20 = TEXT
 							20 {
 								value = {$plugin.tx_seodynamictag.socialmedia.opengraph.facebookadminid}
-								noTrimWrap = |  <meta property="fb:admins" content="|">|
+								noTrimWrap = |  <meta property="fb:admins" content="|" />|
 							}
 						}
 					}
