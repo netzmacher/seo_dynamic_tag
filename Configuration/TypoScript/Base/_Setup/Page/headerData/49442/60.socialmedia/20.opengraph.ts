@@ -182,9 +182,9 @@ plugin.tx_seodynamictag_pi1 {
 								// og:image:width
 							20 = COA
 							20 {
-									// isTrue.data = register:seodyntag_imagePublicUrl
+									// isTrue.data = register:seodyntag_imageWidth
 								if =
-								if.isTrue.data = register:seodyntag_imagePublicUrl
+								if.isTrue.data = register:seodyntag_imageWidth
 									// line feed
 								10 = TEXT
 								10 {

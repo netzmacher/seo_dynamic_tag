@@ -106,22 +106,47 @@ plugin.tx_seodynamictag_pi1 {
 								noTrimWrap = |  <meta name="twitter:description" content="|" />|
 							}
 						}
-							// 10: line feed. 20: twitter:image:src
+							// 10: line feed. 20: twitter:image
 						60 = COA
 						60 {
 								// isTrue.data = register:seodyntag_imagePublicUrl
 							if =
 							if.isTrue.data = register:seodyntag_imagePublicUrl
-								// line feed
-							10 = TEXT
+								// 10: line feed. 20: twitter:image
+							10 = COA
 							10 {
-								char = 10
+									// isTrue.data = register:seodyntag_imagePublicUrl
+								if =
+								if.isTrue.data = register:seodyntag_imagePublicUrl
+									// line feed
+								10 = TEXT
+								10 {
+									char = 10
+								}
+									// twitter:image: data = register:seodyntag_imagePublicUrl
+								20 = TEXT
+								20 {
+									data = register:seodyntag_imagePublicUrl
+									noTrimWrap = |  <meta name="twitter:image" content="|" />|
+								}
 							}
-								// twitter:image:src: data = register:seodyntag_imagePublicUrl
-							20 = TEXT
+								// 10: line feed. 20: twitter:image:alt
+							20 = COA
 							20 {
-								data = register:seodyntag_imagePublicUrl
-								noTrimWrap = |  <meta name="twitter:image:src" content="|" />|
+									// isTrue.data = register:seodyntag_alt
+								if =
+								if.isTrue.data = register:seodyntag_alt
+									// line feed
+								10 = TEXT
+								10 {
+									char = 10
+								}
+									// twitter:image:alt: data = register:seodyntag_alt
+								20 = TEXT
+								20 {
+									data = register:seodyntag_alt
+									noTrimWrap = |  <meta name="twitter:image:alt" content="|" />|
+								}
 							}
 						}
 #							// 10: line feed. 20: twitter:creator
