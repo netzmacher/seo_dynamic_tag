@@ -34,7 +34,7 @@ Extensions
 G
 -
 
-* :ref:`GIT <developers-git>`
+* :ref:`GIT <developers_git>`
 
 
 F

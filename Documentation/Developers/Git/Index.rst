@@ -6,7 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-.. _developers-git:
+.. _developers_git:
 
 Git
 ===

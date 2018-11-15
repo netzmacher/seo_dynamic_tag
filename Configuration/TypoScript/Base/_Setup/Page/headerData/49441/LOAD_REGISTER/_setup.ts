@@ -12,5 +12,5 @@ plugin.tx_seodynamictag_pi1 {
 	}
 }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49441/LOAD_REGISTER/seodyntag_title.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49441/LOAD_REGISTER/seodyntag_title_etc.ts">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Setup/Page/headerData/49441/LOAD_REGISTER/seodyntag_description.ts">

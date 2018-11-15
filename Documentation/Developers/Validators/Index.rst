@@ -3,15 +3,13 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../Includes.txt
+.. include:: ../../Includes.txt
 
 
-.. _developer:
+.. _developers_validators:
 
-Developers
+Validators
 ==========
-
-You're welcome to imprve and develop Seo Dynamic Tag.
 
 Index
 -----
@@ -20,6 +18,4 @@ Index
   :maxdepth: 3
   :titlesonly:
 
-  Setup/Index
-  Git/Index
-  Validators/Index
+  Twitter/Index

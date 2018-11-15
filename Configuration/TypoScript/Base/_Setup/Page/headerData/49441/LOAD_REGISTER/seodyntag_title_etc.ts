@@ -96,7 +96,41 @@ plugin.tx_seodynamictag_pi1 {
 																uid.field = uid
 																fieldName = {$plugin.tx_seodynamictag.database.field.image}
 															}
-															begin = 0
+																// begin: 1 in case of excludeFirstImage. Case from field: "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}". Interal: #i0031
+															begin =
+															begin {
+																stdWrap {
+																		// 10: excludeFirstImage = FALSE, 20: excludeFirstImage = TRUE. Here from field "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}"
+																	cObject = COA
+																	cObject {
+																			// excludeFirstImage = FALSE. Here from field "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}"
+																		10 = TEXT
+																		10 {
+																				// excludeFirstImage = FALSE. Here from field "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}"
+																			if =
+																			if {
+																				isFalse {
+																					field = {$plugin.tx_seodynamictag.database.field.excludeFirstImage}
+																				}
+																			}
+																			value = 0
+																		}
+																			// excludeFirstImage = TRUE. Here from field "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}"
+																		20 = TEXT
+																		20 {
+																				// excludeFirstImage = TRUE. Here from field "{$plugin.tx_seodynamictag.database.field.excludeFirstImage}"
+																			if =
+																			if {
+																				isFalse {
+																					field = {$plugin.tx_seodynamictag.database.field.excludeFirstImage}
+																				}
+																				negate = 1
+																			}
+																			value = 1
+																		}
+																	}
+																}
+															}
 															maxItems = 1
 															renderObj = COA
 															renderObj {

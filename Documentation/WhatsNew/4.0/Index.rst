@@ -12,6 +12,17 @@
 4.0
 ===
 
+
+4.0.1
+-----
+
+
+Manual section: Twitter Card Validator
+''''''''''''''''''''''''''''''''''''''
+
+See: :ref:`Developers > Validators > Twitter <developers_validators_twitter>`
+
+
 4.0.0
 -----
 
