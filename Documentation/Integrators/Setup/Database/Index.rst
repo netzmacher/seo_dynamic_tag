@@ -73,6 +73,24 @@ TypoScript Constant Editor: [SEO DYNAMIC TAG - DATABASE]
 
 
 
+  Property
+    Exclusive image
+
+  Data type
+    string
+
+  Description
+    Name of the field, which contains the flag for an image, which is excluvsive for list views
+
+    Example:
+
+    ``image_1stforlistonly``
+
+  Default
+    image_1stforlistonly
+
+
+
 .. container:: table-row
 
   Property

@@ -1,14 +1,17 @@
 4.0.2
   181130
 	Feature
-	* #t2763: Tags for social media for page record
+	* #t2763: **in progress** Tags for social media for page record
 
 4.0.1
   181115
 	Feature
 	* #i0031: Exclude first image, if it is exclusive for list views.
 						Affected files:
-						* Configuration/TypoScript/Base/_Setup/Page/headerData/49441/LOAD_REGISTER/seodyntag_title_etc.ts
+						* Configuration/TypoScript/Base/
+							* _Constants/database.ts
+							* _Setup/Page/headerData/49441/LOAD_REGISTER/seodyntag_title_etc.ts
+						* Documentation/Integrators/Setup/Database/Index.rst
 
 4.0.0
   181106
