@@ -1,7 +1,12 @@
-4.0.2
-  181130
+4.0.3
+  190101
 	Feature
 	* #t2763: **in progress** Tags for social media for page record
+
+4.0.2
+  181125
+	Improvement
+	* #i0032: Compatible with TYPO3 9.5
 
 4.0.1
   181115
