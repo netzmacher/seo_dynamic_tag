@@ -1,0 +1,19 @@
+{
+	"name": "netzmacher/seo_dynamic_tag",
+	"type": "typo3-cms-extension",
+	"description": "Seo Dynamic Tag",
+	"license": "GPL-2.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"Netzmacher\\SeoDynamicTag\\": "Classes/" 
+		}
+	},
+	"require": {
+		"typo3/cms-core": ">=6.2.0 <10.0.0"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "seo_dynamic_tag"
+		}
+	}
+}

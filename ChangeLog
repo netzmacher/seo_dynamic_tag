@@ -1,3 +1,11 @@
+5.0.0
+  200603
+	Major feature
+	* #t5316: SEO Dynamic Tag 5: new engine with quick configuration
+						New files:
+						* /opt/typo3/extensions/seo_dynamic_tag/composer.json
+						Affected files:
+
 4.0.3
   190101
 	Feature

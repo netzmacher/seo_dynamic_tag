@@ -1,11 +1,11 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'SEO Dynamic Tag 4',
+	'title' => 'SEO Dynamic Tag 5',
 	'description' => 'Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '4.0.2',
+	'version' => '5.0.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
   'constraints' => array(
     'depends' => array(
-      'typo3' => '4.5.0-9.9.99',
+      'typo3' => '6.2.0-10.9.99',
     ),
     'conflicts' => array(
     ),
