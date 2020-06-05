@@ -8,7 +8,7 @@
 
 .. _whatsnew:
 
-===========
+
 What's new?
 ===========
 
@@ -19,4 +19,4 @@ Table of Contents
 	:maxdepth: 3
 	:titlesonly:
 
-	4.0/Index
+	5.0/Index

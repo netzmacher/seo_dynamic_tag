@@ -1,10 +1,13 @@
 5.0.0
   200603
 	Major feature
-	* #t5316: SEO Dynamic Tag 5: new engine with quick configuration
+	* #t5318: SEO Dynamic Tag 5: new engine with quick configuration
 						New files:
 						* /opt/typo3/extensions/seo_dynamic_tag/composer.json
 						Affected files:
+	* #i0033: Support for SEO Dynamic Tag 3 ends
+						Removed files:
+						* Configuration/TypoScript/3.4.1/*
 
 4.0.3
   190101

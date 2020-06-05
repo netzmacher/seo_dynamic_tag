@@ -6,10 +6,15 @@
 .. include:: Includes.txt
 
 
+.. figure:: ext_icon_300x300.gif
+	:width: 300px
+	:alt: Icon
+
 .. _start:
 
+
 =================
-SEO Dynamic Tag 4
+SEO Dynamic Tag 5
 =================
 
 .. only:: html
@@ -30,7 +35,7 @@ SEO Dynamic Tag 4
 		Search Engine Optimisation, SEO, canonical, keywords, meta, tags, google, opengraph, facebook, twitter
 
 	:Copyright:
-		2008-2018
+		2008-2020
 
 	:Author:
 		Dirk Wildt (Die Netzmacher)
@@ -60,4 +65,3 @@ Table of Contents
 	Developers/Index
 	Upgrades/Index
 	WhatsNew/Index
-	Help/Index

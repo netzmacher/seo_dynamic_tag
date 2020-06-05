@@ -1,1 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_Constants/meta/_constants.ts">

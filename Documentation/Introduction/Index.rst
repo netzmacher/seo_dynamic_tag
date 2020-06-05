@@ -13,6 +13,5 @@ Introduction
 	:maxdepth: 3
 	:titlesonly:
 
-	00_Screenshots/Index
-	01_WhatDoesItDo/Index
-	02_ReadyForUse/Index
+	WhatDoesItDo/Index
+	WhatDoYouNeed/Index

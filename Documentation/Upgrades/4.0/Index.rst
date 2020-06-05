@@ -8,42 +8,27 @@
 
 .. _upgrades_4000000:
 
-===
-4.0
-===
 
-4.0.0
------
+Upgrade from 4.x
+==================
 
+* Update extensions, which are using SEO Dynamic Tag.
 
-Page Object
-'''''''''''
+* Maybe you have to include the templates for SEO Dynamic Tag of these extensions again.
 
-Is removed:
+* Root page: please move the SEO Dynamic Tag template below of all other templates.
 
-* TypoScript Constant Editor: [SEO DYNAMIC TAG - PAGE OBJECT]
+* If you have some own SEO Dynamic Tag configuration or templates, remove them.
 
-This is of relevance only, if you have replaced
+* If there is a need for an own configuration, please refer to:
 
-* page = PAGE
-
-with (example)
-
-* myPage = PAGE
+  * :ref:`Developers > Setup <developer_setup>`
 
 
-Social media tags
-'''''''''''''''''
+**Content**
 
-Is a new feature. Please refer to:
+.. toctree::
+	:maxdepth: 2
+	:titlesonly:
 
-* :ref:`Integrators > Setup > Social Media <integrator_setup_socialmedia>`
-
-
-
-Use SEO Dynamic Tag 3
-'''''''''''''''''''''
-
-If you like to use SEO Dynamic Tag 3 please include the static template:
-
-* SEO [99] SEO Dynamic Tag 3 [deprecated]
+	Downgrade/Index

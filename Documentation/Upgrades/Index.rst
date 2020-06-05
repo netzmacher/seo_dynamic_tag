@@ -8,9 +8,10 @@
 
 .. _upgrades:
 
-========
+
 Upgrades
 ========
+
 
 Table of Contents
 -----------------

@@ -12,23 +12,8 @@
 Ready-for-use Extensions
 ========================
 
-If you like to optimize the following extensions for search engines
+Some extensions has e ready-for-use-configuration like:
 
-.. _integrator_extensions_org:
-.. _integrator_extensions_quick-shop:
+* Browser (for the extension Organiser)
 
-* Organiser_ - responsive TYPO3 for the Lobby and the Orgainsers
-
-* `Quick Shop`_ - responsive e-commerce with TYPO3
-
-you have to include the static template only:
-
-* SEO [1] (seo_dynamic_tag)
-
-You have to configure only the properties
-
-* :ref:`Condition: Single view begin <integrator-configuration-condition>`
-
-* :ref:`Database: Pid list <integrator-configuration-database>`
-
-If you have any question, please refer to the Manual of the Organiser_ and the `Quick Shop`_.
+* xBlog (for the extension Organiser)
