@@ -1,6 +1,6 @@
 <?php
 
-namespace Netzmacher\SeoDynamicTag\UserFunc\Condition;
+namespace Netzmacher\SeoDynamicTag\Userfunc\Condition;
 
 /* * *************************************************************
  *  Copyright notice

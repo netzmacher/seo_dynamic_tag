@@ -1,6 +1,6 @@
 <?php
 
-namespace Netzmacher\SeoDynamicTag\UserFunc;
+namespace Netzmacher\SeoDynamicTag\Userfunc;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Netzmacher\SeoDynamicTag\Backend\Extensionmanager;

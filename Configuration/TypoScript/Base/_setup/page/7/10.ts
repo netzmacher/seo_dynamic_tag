@@ -8,7 +8,7 @@ page {
 			// Sets the registers: seodynamictagTable, seodynamictagUid, seodynamictagPid, seodynamictagAdditionalParams
 		10 = USER
 		10 {
-			userFunc = Netzmacher\SeoDynamicTag\UserFunc\PluginUserfunc->SetRegisterParamsPidTableUid
+			userFunc = Netzmacher\SeoDynamicTag\Userfunc\PluginUserfunc->SetRegisterParamsPidTableUid
 			plugins < plugin.tx_seodynamictag.setup.plugins
 		}
 	}

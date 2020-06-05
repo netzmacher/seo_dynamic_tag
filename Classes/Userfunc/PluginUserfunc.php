@@ -1,6 +1,6 @@
 <?php
 
-namespace Netzmacher\SeoDynamicTag\UserFunc;
+namespace Netzmacher\SeoDynamicTag\Userfunc;
 
 use Netzmacher\SeoDynamicTag\Utility\SqlUtility;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
@@ -55,7 +55,6 @@ class PluginUserfunc extends AbstractUserfunc
 	 */
 	public function SetRegisterParamsPidTableUid( $content, $conf )
 	{
-	
 		static $matchParameter = null;
 
 		unset( $content );
