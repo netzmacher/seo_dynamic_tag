@@ -111,8 +111,11 @@ class PluginUserfunc extends AbstractUserfunc
 	 */
 	private function _getParameters()
 	{
-		$postParameter = ( array ) filter_input_array( INPUT_POST );
-		$getParameter = ( array ) filter_input_array( INPUT_GET );
+		// 200605, dwildt: Next two lines doesn't run in context with EXT:realurl
+		//$postParameter = ( array ) filter_input_array( INPUT_POST );
+		//$getParameter = ( array ) filter_input_array( INPUT_GET );
+		$postParameter = ( array ) $_POST;
+		$getParameter = ( array ) $_GET;
 		$mergedGPParameters = $getParameter;
 		ArrayUtility::mergeRecursiveWithOverrule( $mergedGPParameters, $postParameter );
 		return $mergedGPParameters;
