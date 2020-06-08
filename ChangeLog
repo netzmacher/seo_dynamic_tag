@@ -3,10 +3,22 @@ CHANGELOG: https://bit.ly/3eO5msW
 UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
+
+5.1.0
+  200608
+	Feature
+	* #t5333: Replace timestamp
+						New files:
+						* /opt/typo3/extensions/seo_dynamic_tag/Classes/Userfunc/RenderUserfunc.php
+						* /opt/typo3/extensions/seo_dynamic_tag/Configuration/TypoScript/Base/_constants/date.ts
+						Affected files:
+						* /opt/typo3/extensions/seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/20_CONTENT.ts
+
 5.0.0
   200603
 	Major feature
-	* #t5318: SEO Dynamic Tag 5: new engine with quick configuration
+	* #t5318, #t5329:
+						SEO Dynamic Tag 5: new engine with quick configuration
 						New files:
 						* /opt/typo3/extensions/seo_dynamic_tag/composer.json
 						Affected files:

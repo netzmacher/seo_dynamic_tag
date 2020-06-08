@@ -7,7 +7,7 @@ page {
 	7 = COA
 }
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/10.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/20.ts">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/30.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/10_USER.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/20_CONTENT.ts">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/30_FILES.ts">
 //<INCLUDE_TYPOSCRIPT: source="FILE:EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/40.dev.ts">
