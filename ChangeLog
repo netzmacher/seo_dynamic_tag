@@ -4,6 +4,13 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+5.1.2
+  201018
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #i0036: [TASK] Improve composer.json. Here: move <=10.9.99 to <11.0.0
+						Affected file:
+						* composer.json
+
 5.1.1
   200924
 	Author: Dirk Wildt (Die Netzmacher), http://wildt.at.die-netzmacher.de
