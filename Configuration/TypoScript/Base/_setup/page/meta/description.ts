@@ -17,11 +17,12 @@ page {
 				20 {
 					if =
 					if.isFalse.data = register:seodynamictagDescription
-					field = abstract // description
+					data = levelfield:-1, description, slide
+					//field = abstract // description
 					crop = {$plugin.tx_seodynamictag.crop.description}
 					stripHtml         = 1
 					htmlSpecialChars  = 1
-					ifEmpty = {$plugin.tx_seodynamictag.default.description}
+					ifEmpty = @shfdgjak {$plugin.tx_seodynamictag.default.description}
 					required = 1
 				}
 					// if.isTrue.data = register:seodynamictagDescription: data = register:seodynamictagDescription

@@ -17,7 +17,8 @@ page {
 				20 {
 					if =
 					if.isFalse.data = register:seodynamictagAuthor
-					field = author
+					data = levelfield:-1, author, slide
+					//field = author
 					ifEmpty = {$plugin.tx_seodynamictag.default.author}
 				}
 					// if.isTrue.data = register:seodynamictagAuthor: data = register:seodynamictagAuthor

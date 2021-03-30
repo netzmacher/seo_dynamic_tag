@@ -4,6 +4,18 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+5.2.0
+  201018
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #v0967: [TASK] slide for author, description, keywords
+						Affected files:
+						* Configuration/TypoScript/Base/_setup/page/meta
+							* author.ts
+							* description.ts
+							* keywords.ts
+						New file:
+						* ext_localconf.php
+
 5.1.2
   201018
 	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com

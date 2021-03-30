@@ -16,7 +16,8 @@ page {
 				20 = TEXT
 				20 {
 					if.isFalse.data = register:seodynamictagKeywords
-					field = abstract // keywords
+					data = levelfield:-1, keywords, slide
+					//field = abstract // keywords
 					crop = {$plugin.tx_seodynamictag.crop.keywords}
 					stripHtml         = 1
 					htmlSpecialChars  = 1
