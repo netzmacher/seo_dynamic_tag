@@ -4,8 +4,13 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+5.2.1
+  210330
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #i0037: [TASK] (c) 2021
+
 5.2.0
-  201018
+  210330
 	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
 	* #v0967: [TASK] slide for author, description, keywords
 						Affected files:

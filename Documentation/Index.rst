@@ -35,7 +35,7 @@ SEO Dynamic Tag 5
 		Search Engine Optimisation, SEO, canonical, keywords, meta, tags, google, opengraph, facebook, twitter
 
 	:Copyright:
-		2008-2020
+		2008-2021
 
 	:Author:
 		Dirk Wildt (Die Netzmacher)
