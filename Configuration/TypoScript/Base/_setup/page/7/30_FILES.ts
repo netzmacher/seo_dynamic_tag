@@ -101,19 +101,88 @@ page {
 					}
 					seodynamictagImagePublicUrl {
 							// Thanks to Kevin Ditscheid: https://stackoverflow.com/questions/39489881/absolute-path-with-img-resource#39490745
-						cObject = TEXT
+						cObject = COA
 						cObject {
-							typolink{
-								parameter.stdWrap{
-									cObject = IMG_RESOURCE
-									cObject{
-										file.import.data = file:current:uid
-										file.treatIdAsReference = 1
-									}
-								}
-								returnLast = url
-								forceAbsoluteUrl = 1
-							}
+                // Get extension from the current file
+              10 = LOAD_REGISTER
+              10 {
+                extension {
+                  cObject = CONTENT
+                  cObject {
+                    table.stdWrap {
+                        // data = file:current:table_local
+                      cObject = TEXT
+                      cObject {
+                        data = file:current:table_local
+                      }
+                    }
+                    select {
+                      pidInList = root
+                        // data = file:current:uid_local
+                      where = TEXT
+                      where {
+                        data = file:current:uid_local
+                        noTrimWrap = |uid=| |
+                      }
+                    }
+                      // field = extension
+                    renderObj = TEXT
+                    renderObj {
+                      field = extension
+                    }
+                  }
+                }
+              }
+              XXX20 = COA
+              XXX20 {
+                12 = TEXT
+                12 {
+                  data = register:extension
+                  noTrimWrap = ||, |
+                }
+                20 = TEXT
+                20 {
+                  data = file:current:table_local
+                  noTrimWrap = ||, | 
+                }
+                30 = TEXT
+                30 {
+                  data = file:current:uid_local
+                  noTrimWrap = ||, |
+                }
+              }
+                // Handle IMG_RESOURCE only, if extension is not vimeo and not youtube
+              30 = CASE
+              30 {
+                  // data = register:extension
+                key =
+                key {
+                  data = register:extension
+                }
+                default = TEXT
+                default {
+                  typolink{
+                    parameter.stdWrap{
+                        // file.import.data = file:current:uid
+                      cObject = IMG_RESOURCE
+                      cObject{
+                        file.import.data = file:current:uid
+                        file.treatIdAsReference = 1
+                      }
+                    }
+                    returnLast = url
+                    forceAbsoluteUrl = 1
+                  }
+                }
+                vimeo = TEXT
+                vimeo {
+                  value =
+                }
+                youtube = TEXT
+                youtube {
+                  value =
+                }
+              }
 						}
 					}
 				}
