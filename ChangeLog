@@ -4,6 +4,13 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+5.2.2
+  210513
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #v2549: [TASK] ogg.image and twitter.image: Don't handle *.vimeo and *.youtube 
+						Affected files:
+            * Configuration/TypoScript/Base/_setup/page/7/30_FILES.ts
+
 5.2.1
   210330
 	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
