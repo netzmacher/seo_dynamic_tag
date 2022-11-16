@@ -156,7 +156,6 @@ page {
 									additionalParams.data	= register:seodynamictagAdditionalParams
 									forceAbsoluteUrl			= 1
 									returnLast						= url
-									useCacheHash					= {$plugin.tx_seodynamictag.canonical.useCashHash}
 								}
 								noTrimWrap = |<meta property="og:url" content="|" />|
 							}

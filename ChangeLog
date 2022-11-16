@@ -4,6 +4,14 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+10.4.0
+  221116
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #i0039: [TASK] Improvements for TYPO3 10.4
+            * Remove useCacheHash
+						Affected files:
+
+
 8.7.0
   221116
 	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com

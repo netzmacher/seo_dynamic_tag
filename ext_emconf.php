@@ -5,7 +5,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'description' => 'Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter.',
 	'category' => 'plugin',
 	'shy' => 0,
-	'version' => '8.7.0',
+	'version' => '10.4.0',
 	'dependencies' => '',
 	'conflicts' => '',
 	'priority' => '',
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'CGLcompliance_note' => '',
   'constraints' => array(
     'depends' => array(
-      'typo3' => '6.2.0-8.7.99',
+      'typo3' => '10.4.0-10.4.99',
     ),
     'conflicts' => array(
     ),
