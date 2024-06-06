@@ -55,7 +55,9 @@ page {
 								de = {$plugin.tx_seodynamictag.title.rootpage.de}
 								en = {$plugin.tx_seodynamictag.title.rootpage.en}
 							}
-						}
+              required = true
+  						noTrimWrap = || – |
+ 						}
 							// if page is not the root page: data = page: title
 						20 = TEXT
 						20 {
@@ -72,13 +74,14 @@ page {
 								negate = 1
 							}
 							data = page: title
+              required = true
+  						noTrimWrap = || – |
 						}
 					}
 						// data = leveltitle: 0
 					20 = TEXT
 					20 {
 						data = leveltitle: 0
-						noTrimWrap = | – ||
 					}
 					wrap = <title>|</title>
 				}

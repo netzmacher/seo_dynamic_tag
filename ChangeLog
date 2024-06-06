@@ -4,6 +4,13 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+10.4.1
+  240606
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+	* #v5764: [TASK] Rootpage without title in title tag
+						Affected files:
+            * Configuration/TypoScript/Base/_setup/page/headerData/49442/20.title.ts
+
 10.4.0
   221116
 	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
