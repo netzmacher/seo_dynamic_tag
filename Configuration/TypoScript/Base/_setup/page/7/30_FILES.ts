@@ -144,7 +144,8 @@ page {
                 }
                 20 = TEXT
                 20 {
-                  data = file:current:table_local
+                  //data = file:current:table_local
+									value = sys_file
                   noTrimWrap = ||, |
                 }
                 30 = TEXT
