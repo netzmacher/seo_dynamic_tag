@@ -8,7 +8,7 @@ use Netzmacher\SeoDynamicTag\Backend\Extensionmanager;
 /* * *************************************************************
  *  Copyright notice
  *
- *  (c) 2018-2021 - Dirk Wildt <http://wildt.at.die-netzmacher.de>
+ *  (c) 2018-2024 - Dirk Wildt <http://wildt.at.die-netzmacher.de>
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is

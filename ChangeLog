@@ -7,7 +7,8 @@ NEWSLETTER: https://die-netzmacher.de/newsletter
 12.4.0
   24-11-02
   Author: Dirk Wildt (Die Netzmacher), http://wildt.at.die-netzmacher.de
-  * #t7314: [UPGRADE] TYPO3 12.4: rector, fractor
+  * #t7314: [UPGRADE] TYPO3 12.4: rector, fractor. Remove cHash
+						[UPGRADE] (c) 2024
 
 10.4.1
   240606

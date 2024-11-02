@@ -28,18 +28,3 @@ Canonical Tag
 
   Default
     NULL
-
-
-.. container:: table-row
-
-  Property
-    Use cash hash
-
-  Data type
-    boolean
-
-  Description
-    Recommended. Use a cash hash parameter for a unique URL.
-
-  Default
-    1
