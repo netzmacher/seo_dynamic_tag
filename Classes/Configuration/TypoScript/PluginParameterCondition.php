@@ -29,9 +29,9 @@ class PluginParameterCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\
 		{
 			$result = TRUE;
 		}
-		if( !empty( $conditionParameters ) && substr( $conditionParameters[ 0 ], 0, 1 ) === '=' )
+		if( !empty( $conditionParameters ) && str_starts_with((string) $conditionParameters[ 0 ], '=') )
 		{
-			$conditionParameters[ 0 ] = trim( substr( $conditionParameters[ 0 ], 1 ) );
+			$conditionParameters[ 0 ] = trim( substr( (string) $conditionParameters[ 0 ], 1 ) );
 			if( $conditionParameters[ 0 ] == '42' )
 			{
 				$result = TRUE;

@@ -54,7 +54,7 @@ class AbstractUserfunc
 	/**
 	 * @var object		the urrent cObject
 	 */
-	public $cObj;
+	protected $cObj;
 
 	/**
 	 * _cObj( ) :
@@ -131,7 +131,7 @@ class AbstractUserfunc
 	 * @version 0.8.26
 	 * @since 0.5.2
 	 */
-	private function _getFlexformValueDiePrompt( $sheet, $field )
+	private function _getFlexformValueDiePrompt( $sheet, $field ): never
 	{
 		$prompt = ''
 						. 'ERROR<br />'
@@ -179,15 +179,12 @@ class AbstractUserfunc
 	 */
 	protected function _actionIsSingle()
 	{
-		$piVars = GeneralUtility::_GP( 'tx_xblog_pi1' );
-		switch(true){
-			case(!isset($piVars['action'])):
-				return false;
-			case($piVars['action'] == 'single'):
-				return true;
-			default:
-				return false;
-		}
+		$piVars = $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_xblog_pi1'] ?? $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_xblog_pi1'] ?? null;
+		return match (true) {
+      !isset($piVars['action']) => false,
+      $piVars['action'] == 'single' => true,
+      default => false,
+  };
 	}
 
 	/**
@@ -202,7 +199,7 @@ class AbstractUserfunc
 	{
 		$uid = $this->cObj->data[ 'uid' ];
 		$list_type = $this->cObj->data[ 'list_type' ];
-		$piVars = GeneralUtility::_GP( 'tx_' . $list_type );
+		$piVars = $GLOBALS['TYPO3_REQUEST']->getParsedBody()['tx_' . $list_type] ?? $GLOBALS['TYPO3_REQUEST']->getQueryParams()['tx_' . $list_type] ?? null;
 
 		if( !isset( $piVars[ 'plugin' ] ) )
 		{
@@ -270,7 +267,7 @@ class AbstractUserfunc
 	 * @version 0.5.2
 	 * @since 0.5.2
 	 */
-	protected function _zzDieWiPrompt( $header, $text, $method, $line )
+	protected function _zzDieWiPrompt( $header, $text, $method, $line ): never
 	{
 		$prompt = '
       <h1 style="color:red;">
@@ -301,5 +298,10 @@ class AbstractUserfunc
       ';
 		die( $prompt );
 	}
+
+ public function setContentObjectRenderer(\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer $cObj): void
+ {
+     $this->cObj = $cObj;
+ }
 
 }

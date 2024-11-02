@@ -177,7 +177,7 @@ class PluginUserfunc extends AbstractUserfunc
 	 * @version 5.0.0
 	 * @since 5.0.0
 	 */
-	private function _setRegister( $plugin, $showUid, $mergedGPParameters )
+	private function _setRegister( $plugin, $showUid, $mergedGPParameters ): void
 	{
 //&tx_xblog_pi1[newsUid]={GP:tx_xblog_pi1|newsUid}		
 		$table = $this->_conf[ 'plugins.' ][ $plugin . '.' ][ 'showUids.' ][ $showUid ];
@@ -217,6 +217,7 @@ class PluginUserfunc extends AbstractUserfunc
 	 */
 	private function _setRegisterAdditionalParams( $plugin, $showUid, $uid, $mergedGPParameters )
 	{
+//        var_dump(__METHOD__, __LINE__, $plugin, $showUid, $uid, $mergedGPParameters);
 		$additionalParams = '&' . $plugin . '[' . $showUid . ']=' . $uid;
 
 		$_conf = $this->_conf[ 'plugins.' ][ $plugin . '.' ][ 'additionalParams' ];
@@ -226,16 +227,16 @@ class PluginUserfunc extends AbstractUserfunc
 			return $additionalParams;
 		}
 
-		$_confParams = explode( ',', $_conf );
+		$_confParams = explode( ',', (string) $_conf );
 		foreach( $_confParams as $_confParam )
 		{
 			$_confParam = trim( $_confParam );
-			$value = $mergedGPParameters[ $plugin ][ $_confParam ];
+			$value = $mergedGPParameters[ $plugin ][ $_confParam ] ?? null;
 			if( empty( $value ) )
 			{
 				continue;
 			}
-			$value = htmlspecialchars( $value );
+			$value = htmlspecialchars( (string) $value );
 			$additionalParams = $additionalParams . '&' . $plugin . '[' . $_confParam . ']=' . $value;
 		}
 

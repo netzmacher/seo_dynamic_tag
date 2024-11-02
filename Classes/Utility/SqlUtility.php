@@ -54,7 +54,7 @@ class SqlUtility
 	 */
 	protected static function QueryBuilder( $table ): QueryBuilder
 	{
-		return self::_connection( $table )->createQueryBuilder( $table );
+		return self::_connection( $table )->createQueryBuilder();
 	}
 
 	/**

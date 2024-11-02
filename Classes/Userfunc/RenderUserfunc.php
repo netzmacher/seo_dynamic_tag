@@ -74,7 +74,7 @@ class RenderUserfunc extends AbstractUserfunc
 	{
 		$matches = null;
 
-		preg_match( '/\d{10}/', $value, $matches );
+		preg_match( '/\d{10}/', (string) $value, $matches );
 		if( !isset( $matches[ 0 ] ) )
 		{
 			return $value;
