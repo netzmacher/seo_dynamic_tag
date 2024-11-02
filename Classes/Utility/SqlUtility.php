@@ -94,7 +94,7 @@ class SqlUtility
 		;
 
 		$rows = $queryBuilder
-						->execute()
+						->executeQuery()
 						->fetchAll()
 		;
 
