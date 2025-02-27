@@ -9,7 +9,7 @@
 What do you need?
 =================
 
-* TYPO3 from 8.7 to 10.4.
+* TYPO3 12.4.
 
 * SEO Dynamic Tag
 

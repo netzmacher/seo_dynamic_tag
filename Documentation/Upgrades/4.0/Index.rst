@@ -34,4 +34,3 @@ Upgrade from 4.x
 	:titlesonly:
 
 	Remove/Index
-	Downgrade/Index
