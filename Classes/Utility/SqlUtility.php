@@ -43,62 +43,66 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class SqlUtility
 {
 
-	/**
-	 * QueryBuilder()
-	 * 
-	 * @param string $table
-	 * @return QueryBuilder
-	 * 
-	 * @version	5.0.0
-	 * @since	5.0.0
-	 */
-	protected static function QueryBuilder( $table ): QueryBuilder
-	{
-		return self::_connection( $table )->createQueryBuilder();
-	}
+    /**
+     * QueryBuilder()
+     * 
+     * @param string $table
+     * @return QueryBuilder
+     * 
+     * @version	5.0.0
+     * @since	5.0.0
+     */
+    protected static function QueryBuilder($table): QueryBuilder
+    {
+        return self::_connection($table)->createQueryBuilder();
+    }
 
-	/**
-	 * _connection
-	 * 
-	 * @param string $table
-	 * @return Connection
-	 * 
-	 * @version	5.0.0
-	 * @since	5.0.0
-	 */
-	private static function _connection( $table ): Connection
-	{
-		return GeneralUtility::makeInstance( ConnectionPool::class )->getConnectionForTable( $table );
-	}
+    /**
+     * _connection
+     * 
+     * @param string $table
+     * @return Connection
+     * 
+     * @version	5.0.0
+     * @since	5.0.0
+     */
+    private static function _connection($table): Connection
+    {
+        return GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable($table);
+    }
 
-	/**
-	 * getPid():
-	 *
-	 * @param string	$table		table
-	 * @param integer	$uid			uid
-	 * @return string	$pid			pid
-	 * @access public
-	 * @version 5.0.0
-	 * @since 5.0.0
-	 */
-	public static function getPid( $table, $uid )
-	{
-		$queryBuilder = self::QueryBuilder( $table );
+    /**
+     * getPid():
+     *
+     * @param string	$table		table
+     * @param integer	$uid			uid
+     * @return string	$pid			pid
+     * @access public
+     * @version 5.0.0
+     * @since 5.0.0
+     */
+    public static function getPid($table, $uid): ?int
+    {
+        $queryBuilder = self::QueryBuilder($table);
 
-		$queryBuilder
-						->select( 'pid' )
-						->from( $table )
-						->where(
-										$queryBuilder->expr()->eq( 'uid', $uid )
-						)
-		;
+        $queryBuilder
+          ->select('pid')
+          ->from($table)
+          ->where(
+            $queryBuilder->expr()->eq('uid', $uid)
+          )
+        ;
 
-		$rows = $queryBuilder
-						->executeQuery()
-						->fetchAll()
-		;
+        $rows = $queryBuilder
+          ->executeQuery()
+          ->fetchAll()
+        ;
 
-		return $rows[ 0 ][ 'pid' ];
-	}
+        if (empty($rows))
+        {
+            return null;
+        }
 
+        return $rows[0]['pid'];
+    }
 }
