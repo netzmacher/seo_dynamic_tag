@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = [
   'title'            => 'SEO Dynamic Tag',
-  'description'      => 'Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter.',
+  'description'      => 'Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter/x.',
   'category'         => 'plugin',
   'version'          => '12.4.1',
   'state'            => 'stable',
