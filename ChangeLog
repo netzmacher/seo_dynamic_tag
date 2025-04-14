@@ -4,6 +4,13 @@ UPGRADE: https://bit.ly/2zXMrxj
 NEWSLETTER: https://die-netzmacher.de/newsletter
 
 
+12.4.1
+  25-04-14
+	Author: Dirk Wildt (verdiagdo eG), dirk.wildt@verdigado.com
+  * #v6774: [TASK] Update TypoScript: *.txt, *.ts > *.typoscript 
+						[TASK] (c) 2025
+  * #v0000: [DOC] Update manual
+
 12.4.0
   24-11-02
   Author: Dirk Wildt (Die Netzmacher), http://wildt.at.die-netzmacher.de
