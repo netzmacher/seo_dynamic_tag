@@ -1,0 +1,13 @@
+page {
+  7 >
+  // empty statement for proper comments only
+  7 {
+  }
+  // EXT:seo_dynamic_tag
+  7 = COA
+}
+
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/10_USER.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/20_CONTENT.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/30_FILES.typoscript">
+//@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/40.dev.typoscript">
