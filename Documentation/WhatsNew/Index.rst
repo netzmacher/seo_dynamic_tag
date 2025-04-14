@@ -12,12 +12,16 @@
 What's new?
 ===========
 
-New engine
-----------
+12.4.0
+------
 
-5.0.0
+TYPO3 12.4
+''''''''''
 
-SEO Dynamic Tag is completely new.
+Update for TYPO3 12.4
 
-You need only one TypoScript template on the root page only. Templates on pages
-with single views aren't needed any longer.
+
+SEO Dynamic Tag 4
+'''''''''''''''''
+
+Support for SEO Dynamic Tag 4 is terminated.

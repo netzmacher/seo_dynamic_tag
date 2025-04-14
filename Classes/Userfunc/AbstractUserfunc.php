@@ -2,6 +2,7 @@
 
 namespace Netzmacher\SeoDynamicTag\Userfunc;
 
+use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use Netzmacher\SeoDynamicTag\Backend\Extensionmanager;
 
@@ -49,7 +50,7 @@ class AbstractUserfunc
 	/**
 	 * @var boolean		true || false. Prompt the devUid. For development only
 	 */
-	private $_promptDevUid = false;
+	private bool $_promptDevUid = false;
 
 	/**
 	 * @var object		the urrent cObject
@@ -64,12 +65,13 @@ class AbstractUserfunc
 	 * @version 0.3.0
 	 * @since 0.3.0
 	 */
-	protected function _cObj( $property )
+	protected function _cObj( string $property )
 	{
 		if( !isset( $this->_conf[ $property . '.' ] ) )
 		{
 			return $this->_conf[ $property ];
 		}
+
 		$cObj_name = $this->_conf[ $property ];
 		$cObj_conf = $this->_conf[ $property . '.' ];
 
@@ -77,19 +79,16 @@ class AbstractUserfunc
 	}
 
 	/**
-	 * _extManagerEnabledSessionManagement( ) :
-	 *
-	 * @return void
-	 * @access protected
-	 * @version 0.6.0
-	 * @since 0.6.0
-	 */
-	protected function _extManagerEnabledSessionManagement()
+  * _extManagerEnabledSessionManagement( ) :
+  *
+  * @access protected
+  * @version 0.6.0
+  * @since 0.6.0
+  */
+ protected function _extManagerEnabledSessionManagement(): bool
 	{
-		$enabled = !Extensionmanager::getProperty( 'feature_session' );
-
 		//var_dump(__METHOD__, __LINE__, $enabled);
-		return $enabled;
+		return !Extensionmanager::getProperty( 'feature_session' );
 	}
 
 	/**
@@ -131,7 +130,7 @@ class AbstractUserfunc
 	 * @version 0.8.26
 	 * @since 0.5.2
 	 */
-	private function _getFlexformValueDiePrompt( $sheet, $field ): never
+	private function _getFlexformValueDiePrompt( string $sheet, string $field ): never
 	{
 		$prompt = ''
 						. 'ERROR<br />'
@@ -143,14 +142,13 @@ class AbstractUserfunc
 	}
 
 	/**
-	 * _pluginExclusive():
-	 *
-	 * @return boolean         
-	 * @access protected
-	 * @version 0.5.2
-	 * @since 0.5.2
-	 */
-	protected function _pluginExclusive()
+  * _pluginExclusive():
+  *
+  * @access protected
+  * @version 0.5.2
+  * @since 0.5.2
+  */
+ protected function _pluginExclusive(): bool
 	{
 		$modeReceive = $this->_getFlexformValue( 'ctrl', 'settings.flexform.pi1.ctrl.mode.receive' );
 		switch( true )
@@ -206,14 +204,8 @@ class AbstractUserfunc
 //			var_dump( __METHOD__, __LINE__, 'no URI param tx_' . $list_typeplugin . '[plugin]' );
 			return false;
 		}
-
-		if( $piVars[ 'plugin' ] != $uid )
-		{
-//			var_dump( __METHOD__, __LINE__, 'tx_' . $list_typeplugin . '[plugin] isn\'t the uid of the current xBlog plugin' );
-			return false;
-		}
-
-		return true;
+  //			var_dump( __METHOD__, __LINE__, 'tx_' . $list_typeplugin . '[plugin] isn\'t the uid of the current xBlog plugin' );
+  return $piVars[ 'plugin' ] == $uid;
 	}
 
 	/**
@@ -244,7 +236,7 @@ class AbstractUserfunc
 	 * @version 0.9.7
 	 * @since 0.5.2
 	 */
-	protected function _unproperParam( $param, $defaultPrompt )
+	protected function _unproperParam( string $param, string $defaultPrompt )
 	{
 		$value = $this->_cObj( $param );
 		if( empty( $value ) )
@@ -260,14 +252,13 @@ class AbstractUserfunc
 	}
 
 	/**
-	 * _zzDieWiPrompt( ) :
-	 *
-	 * @access protected
-	 * @return boolean
-	 * @version 0.5.2
-	 * @since 0.5.2
-	 */
-	protected function _zzDieWiPrompt( $header, $text, $method, $line ): never
+  * _zzDieWiPrompt( ) :
+  *
+  * @access protected
+  * @version 0.5.2
+  * @since 0.5.2
+  */
+ protected function _zzDieWiPrompt( string $header, string $text, string $method, string $line ): never
 	{
 		$prompt = '
       <h1 style="color:red;">
@@ -299,7 +290,7 @@ class AbstractUserfunc
 		die( $prompt );
 	}
 
- public function setContentObjectRenderer(\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer $cObj): void
+ public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
  {
      $this->cObj = $cObj;
  }

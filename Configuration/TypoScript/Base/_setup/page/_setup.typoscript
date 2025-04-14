@@ -1,0 +1,5 @@
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/config.typoscript">
+// Next template MUST BE before all other templates
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/7/_setup.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/headerData/_setup.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_setup/page/meta/_setup.typoscript">

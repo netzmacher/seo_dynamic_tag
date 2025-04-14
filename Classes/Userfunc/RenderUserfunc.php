@@ -58,8 +58,7 @@ class RenderUserfunc extends AbstractUserfunc
 		$this->_conf = $conf;
 
 		$value = $this->_cObj( 'cObject' );
-		$value = $this->_replaceTimestamp( $value );
-		return $value;
+		return $this->_replaceTimestamp( $value );
 	}
 
 	/**
@@ -83,9 +82,8 @@ class RenderUserfunc extends AbstractUserfunc
 		$tstamp = $matches[ 0 ];
 		$strftime = $this->_cObj( 'strftime' );
 		$date = strftime( $strftime, $tstamp );
-		$value = str_replace( $tstamp, $date, $value );
 
-		return $value;
+		return str_replace( $tstamp, $date, $value );
 	}
 
 }

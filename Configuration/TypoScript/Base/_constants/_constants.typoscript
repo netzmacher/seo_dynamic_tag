@@ -1,0 +1,5 @@
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/canonical.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/date.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/image.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/meta.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/socialmedia.typoscript">

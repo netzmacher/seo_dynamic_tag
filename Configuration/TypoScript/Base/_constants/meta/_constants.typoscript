@@ -1,0 +1,4 @@
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/meta/author.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/meta/description.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/meta/keywords.typoscript">
+@import "EXT:seo_dynamic_tag/Configuration/TypoScript/Base/_constants/meta/title.typoscript">
