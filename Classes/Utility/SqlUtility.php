@@ -45,10 +45,9 @@ class SqlUtility
 
     /**
      * QueryBuilder()
-     * 
+     *
      * @param string $table
-     * @return QueryBuilder
-     * 
+     *
      * @version	5.0.0
      * @since	5.0.0
      */
@@ -59,14 +58,12 @@ class SqlUtility
 
     /**
      * _connection
-     * 
-     * @param string $table
-     * @return Connection
-     * 
+     *
+     *
      * @version	5.0.0
      * @since	5.0.0
      */
-    private static function _connection($table): Connection
+    private static function _connection(string $table): Connection
     {
         return GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable($table);
     }
@@ -93,12 +90,10 @@ class SqlUtility
           )
         ;
 
-        $rows = $queryBuilder
-          ->executeQuery()
-          ->fetchAll()
+        $rows = $queryBuilder->executeQuery()->fetchAllAssociative()
         ;
 
-        if (empty($rows))
+        if ($rows === [])
         {
             return null;
         }

@@ -39,22 +39,16 @@ class XXXRegister
 {
 
 	/**
-	 * AreSet() : 
-	 *
-	 * @return boolean
-	 * @version 5.0.0
-	 * @since 5.0.0
-	 */
-	public static function AreSet()
+  * AreSet() :
+  *
+  * @version 5.0.0
+  * @since 5.0.0
+  */
+ public static function AreSet(): bool
 	{
 		global $GLOBALS;
 		var_dump( __METHOD__, __LINE__, $GLOBALS[ 'TSFE' ]->register );
-		if( empty( $GLOBALS[ 'TSFE' ]->register[ 'seodynamictagTable' ] ) )
-		{
-			return false;
-		}
-
-		return true;
+  return !empty( $GLOBALS[ 'TSFE' ]->register[ 'seodynamictagTable' ] );
 	}
 
 }

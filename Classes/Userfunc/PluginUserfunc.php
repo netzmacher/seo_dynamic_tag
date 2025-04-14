@@ -68,38 +68,38 @@ class PluginUserfunc extends AbstractUserfunc
 		if( !isset( $conf[ 'plugins.' ] ) )
 		{
 			$matchParameter = false;
-			return;
+			return null;
 		}
 
 		$mergedGPParameters = $this->_getParameters();
 		if( empty( $mergedGPParameters ) )
 		{
 			$matchParameter = false;
-			return;
+			return null;
 		}
 
 		$plugin = $this->_getPlugin( $mergedGPParameters );
 		if( empty( $plugin ) )
 		{
 			$matchParameter = false;
-			return;
+			return null;
 		}
 
 		$showUid = $this->_getShowUid( $plugin, $mergedGPParameters );
 		if( empty( $showUid ) )
 		{
 			$matchParameter = false;
-			return;
+			return null;
 		}
 
 		if( !$this->_setRegister( $plugin, $showUid, $mergedGPParameters ) )
 		{
 			$matchParameter = false;
-			return;
+			return null;
 		}
 
 		$matchParameter = true;
-		return;
+		return null;
 	}
 
 	/**
@@ -114,8 +114,8 @@ class PluginUserfunc extends AbstractUserfunc
 		// 200605, dwildt: Next two lines doesn't run in context with EXT:realurl
 		//$postParameter = ( array ) filter_input_array( INPUT_POST );
 		//$getParameter = ( array ) filter_input_array( INPUT_GET );
-		$postParameter = ( array ) $_POST;
-		$getParameter = ( array ) $_GET;
+		$postParameter = $_POST;
+		$getParameter = $_GET;
 		$mergedGPParameters = $getParameter;
 		ArrayUtility::mergeRecursiveWithOverrule( $mergedGPParameters, $postParameter );
 		return $mergedGPParameters;
@@ -133,9 +133,9 @@ class PluginUserfunc extends AbstractUserfunc
 	{
 		$plugins = array_keys( $this->_conf[ 'plugins.' ] );
 		$plugin = array_intersect( $plugins, array_keys( $mergedGPParameters ) );
-		if( empty( $plugin ) )
+		if( $plugin === [] )
 		{
-			return;
+			return null;
 		}
 
 		// A plugin is part of the URL parameters
@@ -152,13 +152,13 @@ class PluginUserfunc extends AbstractUserfunc
 	 * @version 5.0.0
 	 * @since 5.0.0
 	 */
-	private function _getShowUid( $plugin, $mergedGPParameters )
+	private function _getShowUid( string $plugin, array $mergedGPParameters )
 	{
 
 		$showUid = array_intersect( array_keys( $this->_conf[ 'plugins.' ][ $plugin . '.' ][ 'showUids.' ] ), array_keys( $mergedGPParameters[ $plugin ] ) );
-		if( empty( $showUid ) )
+		if( $showUid === [] )
 		{
-			return;
+			return null;
 		}
 
 		// A plugin with its showUid is part of the URL parameters
@@ -167,17 +167,16 @@ class PluginUserfunc extends AbstractUserfunc
 	}
 
 	/**
-	 * _setRegister() : Set the registers: seodynamictagTable, seodynamictagUid, seodynamictagPid, seodynamictagAdditionalParams
-	 * 									Only in case of matched requirements!
-	 *
-	 * @param  string
-	 * @param  string
-	 * @param  array
-	 * @return string	
-	 * @version 5.0.0
-	 * @since 5.0.0
-	 */
-	private function _setRegister( $plugin, $showUid, $mergedGPParameters ): void
+  * _setRegister() : Set the registers: seodynamictagTable, seodynamictagUid, seodynamictagPid, seodynamictagAdditionalParams
+  * 									Only in case of matched requirements!
+  *
+  * @param  string
+  * @param  string
+  * @param  array
+  * @version 5.0.0
+  * @since 5.0.0
+  */
+ private function _setRegister( string $plugin, $showUid, array $mergedGPParameters ): void
 	{
 //&tx_xblog_pi1[newsUid]={GP:tx_xblog_pi1|newsUid}		
 		$table = $this->_conf[ 'plugins.' ][ $plugin . '.' ][ 'showUids.' ][ $showUid ];
@@ -185,14 +184,15 @@ class PluginUserfunc extends AbstractUserfunc
 		{
 			return;
 		}
+
 		$uid = ( int ) $mergedGPParameters[ $plugin ][ $showUid ];
-		if( empty( $uid ) )
+		if( $uid === 0 )
 		{
 			return;
 		}
 
 		$pid = SqlUtility::getPid( $table, $uid );
-		if( empty( $pid ) )
+		if( $pid === null || $pid === 0 )
 		{
 			return;
 		}
@@ -206,16 +206,15 @@ class PluginUserfunc extends AbstractUserfunc
 	}
 
 	/**
-	 * _setRegister() : Set the register: seodynamictagAdditionalParams
-	 *
-	 * @param  string
-	 * @param  string
-	 * @param  array
-	 * @return string	
-	 * @version 5.0.0
-	 * @since 5.0.0
-	 */
-	private function _setRegisterAdditionalParams( $plugin, $showUid, $uid, $mergedGPParameters )
+  * _setRegister() : Set the register: seodynamictagAdditionalParams
+  *
+  * @param  string
+  * @param  string
+  * @param  array
+  * @version 5.0.0
+  * @since 5.0.0
+  */
+ private function _setRegisterAdditionalParams( string $plugin, string $showUid, int $uid, array $mergedGPParameters ): string
 	{
 //        var_dump(__METHOD__, __LINE__, $plugin, $showUid, $uid, $mergedGPParameters);
 		$additionalParams = '&' . $plugin . '[' . $showUid . ']=' . $uid;
@@ -236,6 +235,7 @@ class PluginUserfunc extends AbstractUserfunc
 			{
 				continue;
 			}
+
 			$value = htmlspecialchars( (string) $value );
 			$additionalParams = $additionalParams . '&' . $plugin . '[' . $_confParam . ']=' . $value;
 		}
