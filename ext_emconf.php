@@ -1,10 +1,10 @@
 <?php
 
 $EM_CONF[$_EXTKEY] = [
-  'title'            => 'SEO Dynamic Tag 5',
+  'title'            => 'SEO Dynamic Tag',
   'description'      => 'Search Engine Optimisation (SEO) for title tag, canonical tag, meta tags author, description and keywords and social media tags for google, opengraph/facebook and twitter.',
   'category'         => 'plugin',
-  'version'          => '10.4.1',
+  'version'          => '12.4.1',
   'state'            => 'stable',
   'clearcacheonload' => 0,
   'author'           => 'Dirk Wildt (Die Netzmacher)',

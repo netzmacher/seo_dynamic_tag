@@ -14,6 +14,4 @@ Ready-for-use Extensions
 
 Some extensions has e ready-for-use-configuration like:
 
-* Browser (for the extension Organiser)
-
 * xBlog (for the extensions Organiser and Quick Shop)
